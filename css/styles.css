@@ -76,7 +76,7 @@ textarea:focus, input:focus{
 }
 
 .grid-container{
-    /* width: auto; */
+    margin-left: 5em;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
@@ -86,7 +86,7 @@ textarea:focus, input:focus{
 }
 
 .card{
-    width: 16rem;
+    width: 24rem;
     height: 36rem;
 }
 .card-button{
@@ -119,4 +119,8 @@ footer{
 }
 .copy{
     font-size:10px;
+}
+#descripcion{
+    text-align: justify;
+    padding: 0 5em 0 0;
 }
