@@ -1,8 +1,10 @@
 @font-face {
     font-family: Exo;
     src: url(../fonts/static/Exo-SemiBold.ttf);
-  }
-
+}
+body{
+    font-family: Exo;
+}
 .navbar{
     display: flex;
     flex-direction: row;
@@ -10,6 +12,11 @@
     top: 0px;
     width: 100%;
     z-index: 9;
+}
+
+.main-headers{
+    text-align: center;
+
 }
 
 .input-wrapper{
@@ -37,9 +44,9 @@
     left: 5px;
     top: 50%;
     transform: translateY(-50%);
-  }
+}
 
-  textarea:focus, input:focus{
+textarea:focus, input:focus{
     outline: none;
 }
 
@@ -66,4 +73,41 @@
     margin-right: 50px;
     justify-content: space-around;
     align-items: center;
+}
+
+.grid-container{
+    /* width: auto; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 2em;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 16rem;
+    height: 36rem;
+}
+.card-button{
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+    margin-bottom: 20px;
+}
+
+.card-title{
+    margin: 0px;
+}
+.card-body{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+.card-icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
