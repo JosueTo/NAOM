@@ -111,3 +111,12 @@ textarea:focus, input:focus{
     align-items: center;
     justify-items: center;
 }
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #FFF;
+}
+.copy{
+    font-size:10px;
+}
