@@ -8,32 +8,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
 </head>
 
 <body>
 
-    <nav class="navbar" style="background-color: #ffffff; border-bottom: black 3px solid; ">
-        <img src="../Fotos_pagina/Original makeup.png" alt="" width="108px">
-
+    <nav class="navbar">
+        <img src="../Fotos_pagina/Original makeup.png" alt="" width="96px" id="pageLogo">
+    
         <div id="menuNav">
-            <span class="nav">MAQUILLAJE</span>
-            <span class="nav">CUIDADO FACIAL</span>
-            <span class="nav">BROCHAS</span>
-            <span class="nav">ACCESORIOS</span>
-            <span class="nav">CONTACTO</span>
-            <span class="nav">NOSOTROS</span>
+          <span class="nav">MAQUILLAJE</span>
+          <span class="nav">CUIDADO FACIAL</span>
+          <span class="nav">BROCHAS</span>
+          <span class="nav">ACCESORIOS</span>
+          <span class="nav">CONTACTO</span>
+          <span class="nav">NOSOTROS</span>
         </div>
-
+    
         <div class="input-wrapper">
-            <img src="../Fotos_pagina/Lupa1.png" alt="" width="18px" id="iconSearch">
-            <input type="search" placeholder="Buscar" id="searchInput">
+          <button id="searchButton"><img src="../Fotos_pagina/Lupa.png" alt="" width="18px" id="iconSearch"></button>
+          <button id="cancelSearch" style="display: none;"><img src="../Fotos_pagina/X.png" alt="" width="30px" id="cancelSearchIcon"></button>
+          <input type="search" placeholder="Buscar" id="searchInput" style="display:none">
         </div>
-
+    
         <div class="user-wrapper">
-            <img src="../Fotos_pagina/Carrito.png" alt="" width="35px">
-            <img src="../Fotos_pagina/Usuario.png" alt="" width="35px">
+          <img src="../Fotos_pagina/Carrito.png" alt="" width="35px">
+          <img src="../Fotos_pagina/Usuario.png" alt="" width="35px">
         </div>
-    </nav>
+      </nav>
     <br>
 
     <header class="main-headers">
@@ -97,6 +99,7 @@
 
 
 
+    <script src="../js/navbar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
