@@ -1,3 +1,8 @@
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 @font-face {
     font-family: Exo;
     src: url(../fonts/static/Exo-SemiBold.ttf);
@@ -5,74 +10,10 @@
 body{
     font-family: Exo;
 }
-.navbar{
-    display: flex;
-    flex-direction: row;
-    position: sticky;
-    top: 0px;
-    width: 100%;
-    z-index: 9;
-}
 
-.main-headers{
-    text-align: center;
-
-}
-
-.input-wrapper{
-    position: relative;
-    width: 313px;
-    height: 42px;
-}
-
-#searchInput{
-    width: 5em;
-    height: 2.5em;
-    color: #000000;
-    padding: 0px 0px 0px 28px;
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.226);
-}
-
-#iconSearch{
-    color: #191919;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-}
 
 textarea:focus, input:focus{
     outline: none;
-}
-
-#menuNav{
-    display: flex;
-    flex-direction: row;
-    width: 820px;
-    height: 60px;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.nav{
-    font-size: 17px;
-    font-weight: bolder;
-    font-family: Exo;
-}
-
-.user-wrapper{
-    display: flex;
-    flex-direction: row;
-    width: 150px;
-    height: 35px;
-    margin-right: 50px;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .grid-container{
