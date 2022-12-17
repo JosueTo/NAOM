@@ -7,42 +7,42 @@
   <title>NAOM-Nosotros</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/aboutus.css">
+
 </head>
 
 <body>
-  <nav class="navbar">
-    <img src="../Fotos_pagina/Original makeup.png" alt="" width="96px" id="pageLogo">
+  <nav class="navbar navbar-expand-lg container-fluid">
+      <div class="container-fluid" id="menuNav">
+        <img src="../Fotos_pagina/Original makeup.png" alt="" width="96px" id="pageLogo">
+        <span class="nav">MAQUILLAJE</span>
+        <span class="nav">CUIDADO FACIAL</span>
+        <span class="nav">BROCHAS</span>
+        <span class="nav">ACCESORIOS</span>
+        <span class="nav">CONTACTO</span>
+        <span class="nav">NOSOTROS</span>
+      <div id="input-wrapper">
+        <button id="searchButton"><img src="../Fotos_pagina/Lupa.png" alt="" width="18px" id="iconSearch"></button>
+        <button id="cancelSearch" style="display: none;"><img src="../Fotos_pagina/X.png" alt="" width="30px" id="cancelSearchIcon"></button>
+        <input type="search" placeholder="Buscar" id="searchInput" style="display:none">
+      </div>
+      <div id="user-wrapper">
+          <img src="../Fotos_pagina/Carrito.png" alt="" width="35px">
+        <img src="../Fotos_pagina/Usuario.png" alt="" width="35px">
+      </div>
+      </div>
+    </nav>
 
-    <div id="menuNav">
-      <span class="nav">MAQUILLAJE</span>
-      <span class="nav">CUIDADO FACIAL</span>
-      <span class="nav">BROCHAS</span>
-      <span class="nav">ACCESORIOS</span>
-      <span class="nav">CONTACTO</span>
-      <span class="nav">NOSOTROS</span>
-    </div>
-
-    <div class="input-wrapper">
-      <button id="searchButton"><img src="../Fotos_pagina/Lupa.png" alt="" width="18px" id="iconSearch"></button>
-      <button id="cancelSearch" style="display: none;"><img src="../Fotos_pagina/X.png" alt="" width="30px" id="cancelSearchIcon"></button>
-      <input type="search" placeholder="Buscar" id="searchInput" style="display:none">
-    </div>
-
-    <div class="user-wrapper">
-      <img src="../Fotos_pagina/Carrito.png" alt="" width="35px">
-      <img src="../Fotos_pagina/Usuario.png" alt="" width="35px">
-    </div>
-  </nav>
   <br>
-
   <header class="main-headers">
   <h1>Nosotros</h1>
   <h6>Conoce al equipo WebOs Rancheros Team</h6>
   </header>
   
-  <div class="grid-container">
+  <div class="container-fluid row" id="mainCard">
     <div class="card">
       <img src="../Fotos_nosotros/lore.jpeg" class="card-img-top" alt="..." width="286px" height="286px">
       <div class="card-body">
@@ -56,13 +56,10 @@
         </ul>
         <p class="card-text">Ingeniera industrial especializada en desarrollo de software, motivada y apasionada por
           aprender y practicar nuevos lenguajes de programación.</p>
-      </div>
-  
-      <div class="card-button">
-        <button><a
-            href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-            target="_blank">Descargar CV</a> </button>
-  
+          <div class="card-button">
+            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+          </div>
       </div>
     </div>
   
@@ -77,14 +74,13 @@
                 alt="" width="25px" height="25px"></a>
           </li>
         </ul>
-        <p class="card-text">Java Developer. Me apasiona la tecnología, me gusta resolver problemas y ser eficiente
-          solucionandolos.</p>
-      </div>
-      <div class="card-button">
-        <button><a
-            href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-            target="_blank">Descargar CV</a> </button>
-  
+        <p class="card-text">Java Developer. Me apasiona la tecnología, me gusta resolver problemas y ser eficiente.
+          Soy muy flexible a la hora de aprender nuevas tecnologias.
+        </p>
+          <div class="card-button">
+            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+          </div>
       </div>
     </div>
   
@@ -101,12 +97,10 @@
         </ul>
         <p class="card-text">Ingeniero Geofísico con un gran gusto en el desarrollo Web Full Stack.Con muchas ganas de
           seguir creciendo personal y profesionalmente.</p>
-      </div>
-      <div class="card-button">
-        <button><a
-            href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-            target="_blank">Descargar CV</a> </button>
-  
+          <div class="card-button">
+            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+          </div>
       </div>
     </div>
   
@@ -123,12 +117,10 @@
         </ul>
         <p class="card-text">Full Stack Developer | HTML, CSS, JavaScript. Profesional cómo desarrollador
           Web/Multiplataforma. Amor por el código, la búsqueda de soluciones y nuevas implementaciones.</p>
-      </div>
-      <div class="card-button">
-        <button><a
-            href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-            target="_blank">Descargar CV</a> </button>
-  
+          <div class="card-button">
+            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+          </div>
       </div>
     </div>
   
@@ -145,13 +137,12 @@
         </ul>
         <p class="card-text">Diseñadora gráfica, autodidacta, apasionada del diseño, la mercadotecnia, fotografía, la
           tecnología y con un gusto adquirido por la programación. Me preparé como Desarrolladora Full Stack y Diseñadora
-          UX.</p>
-      </div>
-      <div class="card-button">
-        <button><a
-            href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-            target="_blank">Descargar CV</a> </button>
-  
+          UX.
+        </p>
+          <div class="card-button">
+            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+          </div>
       </div>
     </div>
   
@@ -169,12 +160,11 @@
         <p class="card-text">Me formé profesionalmente como Ingeniero Industrial y me convertí en desarrollador Full Stack
           por pasión. Comprometido, perseverante, franco y con gusto por trabajar en equipo.
         </p>
-      </div>
-      <div class="card-button">
-        <button><a
-            href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-            target="_blank">Descargar CV</a> </button>
-  
+        <div class="card-button">
+          <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+    
+        </div>
       </div>
     </div>
   
@@ -191,12 +181,11 @@
         </ul>
         <p class="card-text">Ingeniera Bioquímica y Técnica Análista programadora, interesada en el área de TI. Realicé
           cursos y certificaciones para enfocarme al área de desarrollo web Full Stack.</p>
-      </div>
-      <div class="card-button">
-        <button><a
-            href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-            target="_blank">Descargar CV</a> </button>
-  
+          <div class="card-button">
+            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+      
+          </div>
       </div>
     </div>
   
@@ -213,12 +202,10 @@
         </ul>
         <p class="card-text">Egresado en electrónica encontré una pasión en el código lo que motivó a cambiar mi enfoque y
           actual desempeño como desarrollador web buscando siempre innovar y crecer profesionalmente.</p>
-      </div>
-      <div class="card-button">
-        <button><a
-            href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-            target="_blank">Descargar CV</a> </button>
-  
+          <div class="card-button">
+            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+          </div>
       </div>
     </div>
   <div id="descripcion">

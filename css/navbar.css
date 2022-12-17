@@ -10,16 +10,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .navbar{
     background-color: #FAFAFA;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     position: sticky;
-    top: 0px;
-    width: 100%;
-    height: 6em;
+    top: 0;
     z-index: 9;
-    padding: 0;
 }
 
 .main-headers{
@@ -27,7 +20,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 }
 
-.input-wrapper{
+#input-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,11 +52,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     width: 3em;
     height: 3em;
     border-radius: 50%;
-    background-color: gray;
+    background-color: rgba(128, 128, 128, 0.459);
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     text-shadow: 0px 0px 0px transparent;
-    transform: translateX(60px);
+    transform: translateX(1vw);
 }
 
 #searchButton:hover{
@@ -76,7 +69,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     text-shadow: 0px 0px 0px transparent;
-    transform: translateX(22em);
+    transform: translateX(18.5vw);
 }
 
 #pageLogo{
@@ -84,12 +77,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 #menuNav{
-    align-self:center;
     display: flex;
     flex-direction: row;
-    width: 50em;
-    height: 6em;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -97,9 +87,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     font-size: 17px;
     font-weight: bolder;
     font-family: Exo;
+
 }
 
-.user-wrapper{
+.nav:hover{
+    color: rgb(179, 178, 178);
+}
+
+#user-wrapper{
     display: flex;
     flex-direction: row;
     width: 150px;

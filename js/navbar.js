@@ -6,6 +6,7 @@ searchButton.addEventListener("click",function(){
     cancelSearch.style.display = "block";
     searchInput.style.display = "block";
     searchButton.style.display = "none";
+    searchButton.focus();
 })
 
 cancelSearch.addEventListener("click",function(){
