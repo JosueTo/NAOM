@@ -13,10 +13,9 @@
   <link rel="stylesheet" href="../css/aboutus.css">
 
 </head>
-
 <body>
   <nav class="navbar navbar-expand-lg py-0">
-    <div class="container-fluid">
+    <div class="container-fluid" id="mainContainer">
       <a class="navbar-brand" href="#">
         <img src="../Fotos_pagina/Original makeup.png" alt="" width="100px" id="pageBrand">
       </a>
@@ -25,7 +24,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navItem">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mr-0" id="navItem">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">MAQUILLAJE</a>
           </li>
@@ -44,19 +43,22 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">NOSOTROS</a>
           </li>
-          </ul>
 
-          <div class="nav-item" id="searchWrapper">
+          <li class="nav-item"><div class="nav-item" id="searchWrapper">
             <button id="searchButton"><img src="../Fotos_pagina/Lupa.png" alt="" width="18px" id="iconSearch"></button>
             <button id="cancelSearch" style="display: none;"><img src="../Fotos_pagina/X.png" alt="" width="30px"
                 id="cancelSearchIcon"></button>
             <input type="search" placeholder="Buscar" id="searchInput" style="display:none">
-          </div>
+          </div></li>
 
-          <div class="nav-item" style="gap: 5em;" id="userWrapper">
+          <li class="nav-item"></li><div class="nav-item" style="gap: 5em;" id="userWrapper">
             <a href="#"><img src="../Fotos_pagina/Carrito.png" alt="" width="35px" id="shoppingCart"></a>
             <a href="#"><img src="../Fotos_pagina/Usuario.png" alt="" width="35px" id="userIcon"></a>
-          </div>
+          </div></li>
+          </ul>
+
+      
+        
       </div>
     </div>
   </nav>
