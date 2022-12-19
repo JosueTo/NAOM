@@ -15,206 +15,238 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg container-fluid">
-      <div class="container-fluid" id="menuNav">
-        <img src="../Fotos_pagina/Original makeup.png" alt="" width="96px" id="pageLogo">
-        <span class="nav">MAQUILLAJE</span>
-        <span class="nav">CUIDADO FACIAL</span>
-        <span class="nav">BROCHAS</span>
-        <span class="nav">ACCESORIOS</span>
-        <span class="nav">CONTACTO</span>
-        <span class="nav">NOSOTROS</span>
-      <div id="input-wrapper">
-        <button id="searchButton"><img src="../Fotos_pagina/Lupa.png" alt="" width="18px" id="iconSearch"></button>
-        <button id="cancelSearch" style="display: none;"><img src="../Fotos_pagina/X.png" alt="" width="30px" id="cancelSearchIcon"></button>
-        <input type="search" placeholder="Buscar" id="searchInput" style="display:none">
+  <nav class="navbar navbar-expand-lg py-0">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../Fotos_pagina/Original makeup.png" alt="" width="100px" id="pageBrand">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navItem">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">MAQUILLAJE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">CUIDADO FACIAL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">BROCHAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">ACCESORIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">CONTACTO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">NOSOTROS</a>
+          </li>
+          </ul>
+
+          <div class="nav-item" id="searchWrapper">
+            <button id="searchButton"><img src="../Fotos_pagina/Lupa.png" alt="" width="18px" id="iconSearch"></button>
+            <button id="cancelSearch" style="display: none;"><img src="../Fotos_pagina/X.png" alt="" width="30px"
+                id="cancelSearchIcon"></button>
+            <input type="search" placeholder="Buscar" id="searchInput" style="display:none">
+          </div>
+
+          <div class="nav-item" style="gap: 5em;" id="userWrapper">
+            <a href="#"><img src="../Fotos_pagina/Carrito.png" alt="" width="35px" id="shoppingCart"></a>
+            <a href="#"><img src="../Fotos_pagina/Usuario.png" alt="" width="35px" id="userIcon"></a>
+          </div>
       </div>
-      <div id="user-wrapper">
-          <img src="../Fotos_pagina/Carrito.png" alt="" width="35px">
-        <img src="../Fotos_pagina/Usuario.png" alt="" width="35px">
-      </div>
-      </div>
-    </nav>
+    </div>
+  </nav>
 
   <br>
   <header class="main-headers">
-  <h1>Nosotros</h1>
-  <h6>Conoce al equipo WebOs Rancheros Team</h6>
+    <h1>Nosotros</h1>
+    <h6>Conoce al equipo WebOs Rancheros Team</h6>
   </header>
-  
-  <div class="container-fluid row" id="mainCard">
-    <div class="card">
-      <img src="../Fotos_nosotros/lore.jpeg" class="card-img-top" alt="..." width="286px" height="286px">
-      <div class="card-body">
-        <h5 class="card-title">Lorena Rodríguez</h5>
-        <h6>Developer Team</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <a href="https://github.com/lorerzd" target="_blank" class="card-link"><img src="../Fotos_pagina/GitHub.png"
-                alt="" width="25px" height="25px"></a>
-          </li>
-        </ul>
-        <p class="card-text">Ingeniera industrial especializada en desarrollo de software, motivada y apasionada por
-          aprender y practicar nuevos lenguajes de programación.</p>
+
+  <main class="container-fluid text-center">
+    <div class="row" id="cardRow">
+      <div class="card">
+        <img src="../Fotos_nosotros/lore.jpeg" class="card-img-top" alt="..." width="286px" height="286px">
+        <div class="card-body">
+          <h5 class="card-title">Lorena Rodríguez</h5>
+          <h6>Developer Team</h6>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://github.com/lorerzd" target="_blank" class="card-link"><img src="../Fotos_pagina/GitHub.png"
+                  alt="" width="25px" height="25px"></a>
+            </li>
+          </ul>
+          <p class="card-text">Ingeniera industrial especializada en desarrollo de software, motivada y apasionada por
+            aprender y practicar nuevos lenguajes de programación.</p>
           <div class="card-button">
             <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+              target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
           </div>
-      </div>
-    </div>
-  
-    <div class="card">
-      <img src="../Fotos_nosotros/Adrian.png" class="card-img-top" alt="..." width="286px" height="286px">
-      <div class="card-body">
-        <h5 class="card-title">Adrian Arguello</h5>
-        <h6>Developer Team</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <a href="https://github.com/lorerzd" target="_blank" class="card-link"><img src="../Fotos_pagina/GitHub.png"
-                alt="" width="25px" height="25px"></a>
-          </li>
-        </ul>
-        <p class="card-text">Java Developer. Me apasiona la tecnología, me gusta resolver problemas y ser eficiente.
-          Soy muy flexible a la hora de aprender nuevas tecnologias.
-        </p>
-          <div class="card-button">
-            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
-          </div>
-      </div>
-    </div>
-  
-    <div class="card">
-      <img src="../Fotos_nosotros/ivan.jpg" class="card-img-top" alt="..." width="286px" height="286px">
-      <div class="card-body">
-        <h5 class="card-title">Ivan Campos</h5>
-        <h6>Developer Team</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <a href="https://github.com/IvanCC11" target="_blank" class="card-link"><img src="../Fotos_pagina/GitHub.png"
-                alt="" width="25px" height="25px"></a>
-          </li>
-        </ul>
-        <p class="card-text">Ingeniero Geofísico con un gran gusto en el desarrollo Web Full Stack.Con muchas ganas de
-          seguir creciendo personal y profesionalmente.</p>
-          <div class="card-button">
-            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
-          </div>
-      </div>
-    </div>
-  
-    <div class="card">
-      <img src="../Fotos_nosotros/eduardo.jpeg" class="card-img-top" alt="..." width="286px" height="286px">
-      <div class="card-body">
-        <h5 class="card-title">Eduardo Cruz</h5>
-        <h6>Developer Team</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <a href="https://github.com/EdWrite" target="_blank" class="card-link"><img src="../Fotos_pagina/GitHub.png"
-                alt="" width="25px" height="25px"></a>
-          </li>
-        </ul>
-        <p class="card-text">Full Stack Developer | HTML, CSS, JavaScript. Profesional cómo desarrollador
-          Web/Multiplataforma. Amor por el código, la búsqueda de soluciones y nuevas implementaciones.</p>
-          <div class="card-button">
-            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
-          </div>
-      </div>
-    </div>
-  
-    <div class="card">
-      <img src="../Fotos_nosotros/Johanna2.png" class="card-img-top" alt="..." width="286px" height="286px">
-      <div class="card-body">
-        <h5 class="card-title">Johanna Villegas</h5>
-        <h6>Developer Team</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <a href="https://github.com/BestiaDesign" target="_blank" class="card-link"><img
-                src="../Fotos_pagina/GitHub.png" alt="" width="25px" height="25px"></a>
-          </li>
-        </ul>
-        <p class="card-text">Diseñadora gráfica, autodidacta, apasionada del diseño, la mercadotecnia, fotografía, la
-          tecnología y con un gusto adquirido por la programación. Me preparé como Desarrolladora Full Stack y Diseñadora
-          UX.
-        </p>
-          <div class="card-button">
-            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
-          </div>
-      </div>
-    </div>
-  
-    <div class="card">
-      <img src="../Fotos_nosotros/josue.jpg" class="card-img-top" alt="..." width="286px" height="286px">
-      <div class="card-body">
-        <h5 class="card-title">Josue Torres</h5>
-        <h6>SCRUM Master</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <a href="https://github.com/JosueTo" target="_blank" class="card-link"><img src="../Fotos_pagina/GitHub.png"
-                alt="" width="25px" height="25px"></a>
-          </li>
-        </ul>
-        <p class="card-text">Me formé profesionalmente como Ingeniero Industrial y me convertí en desarrollador Full Stack
-          por pasión. Comprometido, perseverante, franco y con gusto por trabajar en equipo.
-        </p>
-        <div class="card-button">
-          <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
-    
         </div>
       </div>
-    </div>
   
-    <div class="card">
-      <img src="../Fotos_nosotros/Maria.png" class="card-img-top" alt="..." width="286px" height="286px">
-      <div class="card-body">
-        <h5 class="card-title">María González</h5>
-        <h6>Developer Team</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <a href="https://github.com/Maria-Glz" target="_blank" class="card-link"><img src="../Fotos_pagina/GitHub.png"
-                alt="" width="25px" height="25px"></a>
-          </li>
-        </ul>
-        <p class="card-text">Ingeniera Bioquímica y Técnica Análista programadora, interesada en el área de TI. Realicé
-          cursos y certificaciones para enfocarme al área de desarrollo web Full Stack.</p>
+      <div class="card">
+        <img src="../Fotos_nosotros/Adrian.png" class="card-img-top" alt="..." width="286px" height="286px">
+        <div class="card-body">
+          <h5 class="card-title">Adrian Arguello</h5>
+          <h6>Developer Team</h6>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://github.com/lorerzd" target="_blank" class="card-link"><img src="../Fotos_pagina/GitHub.png"
+                  alt="" width="25px" height="25px"></a>
+            </li>
+          </ul>
+          <p class="card-text">Java Developer. Me apasiona la tecnología, me gusta resolver problemas y ser eficiente.
+            Soy muy flexible a la hora de aprender nuevas tecnologias.
+          </p>
           <div class="card-button">
             <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
-      
+              target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
           </div>
+        </div>
       </div>
-    </div>
   
-    <div class="card">
-      <img src="../Fotos_nosotros/Memo.png" class="card-img-top" alt="..." width="286px" height="286px">
-      <div class="card-body">
-        <h5 class="card-title">Guillermo Basto</h5>
-        <h6>Product Owner</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <a href="https://github.com/GuillermoBasto" target="_blank" class="card-link"><img
-                src="../Fotos_pagina/GitHub.png" alt="" width="25px" height="25px"></a>
-          </li>
-        </ul>
-        <p class="card-text">Egresado en electrónica encontré una pasión en el código lo que motivó a cambiar mi enfoque y
-          actual desempeño como desarrollador web buscando siempre innovar y crecer profesionalmente.</p>
+      <div class="card">
+        <img src="../Fotos_nosotros/ivan.jpg" class="card-img-top" alt="..." width="286px" height="286px">
+        <div class="card-body">
+          <h5 class="card-title">Ivan Campos</h5>
+          <h6>Developer Team</h6>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://github.com/IvanCC11" target="_blank" class="card-link"><img
+                  src="../Fotos_pagina/GitHub.png" alt="" width="25px" height="25px"></a>
+            </li>
+          </ul>
+          <p class="card-text">Ingeniero Geofísico con un gran gusto en el desarrollo Web Full Stack.Con muchas ganas de
+            seguir creciendo personal y profesionalmente.</p>
           <div class="card-button">
             <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
-                target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+              target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
           </div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="../Fotos_nosotros/eduardo.jpeg" class="card-img-top" alt="..." width="286px" height="286px">
+        <div class="card-body">
+          <h5 class="card-title">Eduardo Cruz</h5>
+          <h6>Developer Team</h6>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://github.com/EdWrite" target="_blank" class="card-link"><img src="../Fotos_pagina/GitHub.png"
+                  alt="" width="25px" height="25px"></a>
+            </li>
+          </ul>
+          <p class="card-text">Full Stack Developer | HTML, CSS, JavaScript. Profesional cómo desarrollador
+            Web/Multiplataforma. Amor por el código, la búsqueda de soluciones y nuevas implementaciones.</p>
+          <div class="card-button">
+            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+              target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="../Fotos_nosotros/Johanna2.png" class="card-img-top" alt="..." width="286px" height="286px">
+        <div class="card-body">
+          <h5 class="card-title">Johanna Villegas</h5>
+          <h6>Developer Team</h6>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://github.com/BestiaDesign" target="_blank" class="card-link"><img
+                  src="../Fotos_pagina/GitHub.png" alt="" width="25px" height="25px"></a>
+            </li>
+          </ul>
+          <p class="card-text">Diseñadora gráfica, autodidacta, apasionada del diseño, la mercadotecnia, fotografía, la
+            tecnología y con un gusto adquirido por la programación. Me preparé como Desarrolladora Full Stack y
+            Diseñadora
+            UX.
+          </p>
+          <div class="card-button">
+            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+              target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="../Fotos_nosotros/josue.jpg" class="card-img-top" alt="..." width="286px" height="286px">
+        <div class="card-body">
+          <h5 class="card-title">Josue Torres</h5>
+          <h6>SCRUM Master</h6>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://github.com/JosueTo" target="_blank" class="card-link"><img src="../Fotos_pagina/GitHub.png"
+                  alt="" width="25px" height="25px"></a>
+            </li>
+          </ul>
+          <p class="card-text">Me formé profesionalmente como Ingeniero Industrial y me convertí en desarrollador Full
+            Stack
+            por pasión. Comprometido, perseverante, franco y con gusto por trabajar en equipo.
+          </p>
+          <div class="card-button">
+            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+              target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="../Fotos_nosotros/Maria.png" class="card-img-top" alt="..." width="286px" height="286px">
+        <div class="card-body">
+          <h5 class="card-title">María González</h5>
+          <h6>Developer Team</h6>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://github.com/Maria-Glz" target="_blank" class="card-link"><img
+                  src="../Fotos_pagina/GitHub.png" alt="" width="25px" height="25px"></a>
+            </li>
+          </ul>
+          <p class="card-text">Ingeniera Bioquímica y Técnica Análista programadora, interesada en el área de TI. Realicé
+            cursos y certificaciones para enfocarme al área de desarrollo web Full Stack.</p>
+          <div class="card-button">
+            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+              target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="../Fotos_nosotros/Memo.png" class="card-img-top" alt="..." width="286px" height="286px">
+        <div class="card-body">
+          <h5 class="card-title">Guillermo Basto</h5>
+          <h6>Product Owner</h6>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="https://github.com/GuillermoBasto" target="_blank" class="card-link"><img
+                  src="../Fotos_pagina/GitHub.png" alt="" width="25px" height="25px"></a>
+            </li>
+          </ul>
+          <p class="card-text">Egresado en electrónica encontré una pasión en el código lo que motivó a cambiar mi enfoque
+            y
+            actual desempeño como desarrollador web buscando siempre innovar y crecer profesionalmente.</p>
+          <div class="card-button">
+            <a href="https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=156%3A1838&t=aBtpH132KLEiomI1-0"
+              target="_blank" class="btn btn-dark" role="button">Descargar CV</a>
+          </div>
+        </div>
+      </div>
+      <div id="descripcion">
+        <h5>Nuestro proyecto</h5>
+        <p>Este proyecto consta de una página de e-commerce adecuada para una tienda en línea de maquillaje existente que
+          se dedicaba a vender mediante instagram.</p>
+        <p>Desarrollamos la página mediante tecnologías como HTML, CSS, JavaScript, bootstrap, Java y bases de datos, para
+          dicho proyecto todos los integrantes se involucraron en todas las partes del desarrollo.</p>
       </div>
     </div>
-  <div id="descripcion">
-    <h5>Nuestro proyecto</h5>
-    <p>Este proyecto consta de una página de e-commerce adecuada para una tienda en línea de maquillaje existente que se dedicaba a vender mediante instagram.</p>
-    <p>Desarrollamos la página mediante tecnologías como HTML, CSS, JavaScript, bootstrap, Java y bases de datos, para dicho proyecto todos los integrantes se involucraron en todas las partes del desarrollo.</p>
-  </div>
-  </div>
-  
+  </main>
+
   <br>
 
   <footer style="background-color: black;">
