@@ -9,62 +9,51 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/navbar.css">
-  <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/aboutus.css">
 
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg py-0">
-    <div class="container-fluid" id="mainContainer">
-      <a class="navbar-brand" href="#">
-        <img src="../Fotos_pagina/Original makeup.png" alt="" width="100px" id="pageBrand">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-xl bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="margin-right: 0;"#"><img src="../Fotos_pagina/Original makeup.png" alt="" width="100px"></a>
+      <div id="user-wrapper">
+        <a class="iconNav" href="#"><img src="../Fotos_pagina/Carrito.png" alt="" width="35px" id="shoppingCart"></a>
+        <a class="iconNav" href="#"><img src="../Fotos_pagina/Usuario.png" alt="" width="35px" id="userIcon"></a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mr-0" id="navItem">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">MAQUILLAJE</a>
+            <a class="nav-link" href="#">Maquillaje</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">CUIDADO FACIAL</a>
+            <a class="nav-link" href="#">Cuidado facial</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">BROCHAS</a>
+            <a class="nav-link" href="#">Brochas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">ACCESORIOS</a>
+            <a class="nav-link" href="#">Accesorios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">CONTACTO</a>
+            <a class="nav-link" href="#">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">NOSOTROS</a>
+            <a class="nav-link" href="#">Nosotros</a>
           </li>
-
-          <li class="nav-item"><div class="nav-item" id="searchWrapper">
-            <button id="searchButton"><img src="../Fotos_pagina/Lupa.png" alt="" width="18px" id="iconSearch"></button>
-            <button id="cancelSearch" style="display: none;"><img src="../Fotos_pagina/X.png" alt="" width="30px"
-                id="cancelSearchIcon"></button>
-            <input type="search" placeholder="Buscar" id="searchInput" style="display:none">
-          </div></li>
-
-          <li class="nav-item"></li><div class="nav-item" style="gap: 5em;" id="userWrapper">
-            <a href="#"><img src="../Fotos_pagina/Carrito.png" alt="" width="35px" id="shoppingCart"></a>
-            <a href="#"><img src="../Fotos_pagina/Usuario.png" alt="" width="35px" id="userIcon"></a>
-          </div></li>
-          </ul>
-
-      
-        
+        </ul>    
       </div>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-dark" type="submit">Search</button>
+      </form>
     </div>
   </nav>
 
   <br>
-  <header class="main-headers">
+  <header class="main-headers text-center">
     <h1>Nosotros</h1>
     <h6>Conoce al equipo WebOs Rancheros Team</h6>
   </header>
@@ -251,20 +240,53 @@
 
   <br>
 
-  <footer style="background-color: black;">
-    <div>
-      <span>Métodos de pago</span>
-      <img src="../Fotos_pagina/tarjetas1.png" alt="" width="200px">
-    </div>
-    <div>
-      <span class="copy">Copyright NAOM (WebOs) - 2022. Todos los derechos reservados.</span>
-    </div>
-    <div>
+   
+<footer class="text-center text-white" style="background-color:black;">
+  <!-- Grid container -->
+  <div class="container">
+    <!-- Section: Social media -->
+    <section class="mb-4">
       <span>Síguenos en redes</span>
-      <img src="../Fotos_pagina/IG.png" alt="" width="25px" height="25px">
-      <img src="../Fotos_pagina/Whats.png" alt="" width="25px" height="25px">
-    </div>
-  </footer>
+      <!-- Whatsapp -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        style="padding: 0;"
+        ><img src="../Fotos_pagina/Whats.png" width="40px" style="color: white;" alt=""></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        style="padding: 0;"
+        ><img src="../Fotos_pagina/IG.png" alt="" width="40px" height="40px"></i
+      ></a>
+      <br>
+      <span>Métodos de pago</span>
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        style="padding: 0;"
+        ><img src="../Fotos_pagina/tarjetas1.png" alt="" width="200px"></i
+      ></a>
+      
+    </section>
+
+  </div>
+
+
+  <div class="text-center text-dark pb-2" style="background-color: rgba(0, 0, 0, 0.2);">
+    Copyright NAOM (WebOs) - 2022. Todos los derechos reservados.
+  </div>
+
+</footer>
 
 
 

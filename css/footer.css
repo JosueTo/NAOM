@@ -1,6 +1,9 @@
 footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     color: #FFF;
+}
+
+@media(min-width:1024px){
+    footer{
+        font-size: 1.2em;
+    }
 }
