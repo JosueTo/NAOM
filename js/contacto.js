@@ -1,5 +1,13 @@
 let btnContactoEnviar = document.getElementById("btnContactoEnviar");
 let idTimeout;
+let correos = ["gbastoa17@gmail.com",
+"josuetolvera@gmail.com",
+"lore.rdz2802@gmail.com",
+"ivancamposceron11@gmail.com",
+"eh180793@gmail.com",
+"maria.gonzalezbarrreda@gmail.com",
+"marzo.2093@gmail.com",
+"arguello.ramosadrian@gmail.com"];
 
 btnContactoEnviar.addEventListener("click", function(event) 
 { 
@@ -66,12 +74,18 @@ if ((idTimeout!=undefined) && (idTimeout!=null))
 
   if (validos == 3){
     Email.send({
-      SecureToken : "6b81c250-0dd0-4825-a352-20c85c39abcd",
-      To : `josuetolvera@gmail.com, josuetolverati@gmail.com`,
-      From : `josuetolvera@gmail.com`,
-      Subject : `${nameFrom.value} - ${emailFrom.value}`,
-      Body : `Información de contacto: <br>
-            ${emailFrom.value}<br> ${cellPhone.value}<br> Mensaje:<br> ${emailBody.value}`
+      SecureToken : "0d441985-cdef-4941-9931-d30a7ed8bde4",
+      To : correos,
+      From : `webosgeneration@gmail.com`,
+      Subject : `${nameFrom.value} te ha enviado un mensaje.`,
+      Body : `${emailBody.value}
+              <br>
+              <br>
+              Informacion de contacto
+              <br>
+              <br>
+              ${emailFrom.value}<br> 
+              ${cellPhone.value}`
     }).then(
     message => alert("Tu correo se envío satisfactoriamente")
       );
