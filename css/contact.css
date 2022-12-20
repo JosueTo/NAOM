@@ -1,31 +1,13 @@
+@font-face {
+    font-family: Exo;
+    src: url(../fonts/static/Exo-SemiBold.ttf);
+}
+
+body {
+    font-family: "Exo", sans-serif;
+}
+
 textarea:focus, input:focus{
     outline: none;
 }
 
-.copy{
-    font-size:10px;
-}
-#descripcion{
-    text-align: justify;
-    padding: 0 5em 0 0;
-}
-
-.contact-container{
-    margin-left: 5em;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    grid-gap: 2em;
-    align-items: center;
-    justify-content: center;
-}
-
-#contactUs{
-    text-align: justify;
-    padding: 3em 10em 0em 10em;
-}
-
-#formContact{
-    text-align: justify;
-    padding: 3em 5em 0em 0em;
-}
