@@ -11,10 +11,10 @@ body{
 .card{
     width: 24rem;
     min-height: 40rem;
-    margin-bottom: 2.5em;
-    margin-top: 2.5em;
-    margin-left: 0.5em;
-    margin-right: 1.25em;
+    margin-bottom: 1.25rem;
+    margin-top:1.25rem;
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
 }
 .card-button{
     position: absolute;
@@ -41,4 +41,5 @@ body{
 
 #cardRow{
     width: 100%;
+    margin: 0px 0px 0px 0px;
 }

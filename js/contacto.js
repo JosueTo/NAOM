@@ -1,62 +1,70 @@
 let btnContactoEnviar = document.getElementById("btnContactoEnviar");
 let idTimeout;
+let correos = ["gbastoa17@gmail.com",
+"josuetolvera@gmail.com",
+"lore.rdz2802@gmail.com",
+"ivancamposceron11@gmail.com",
+"eh180793@gmail.com",
+"maria.gonzalezbarrreda@gmail.com",
+"marzo.2093@gmail.com",
+"arguello.ramosadrian@gmail.com"];
+
+let emailConfirmar = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+let telefonoConfirmar = /[0-9]{2}-[0-9]{4}-[0-9]{4}/;
+let nombreConfirmar =/^[a-zA-Z-ZÑñÁáÉéÍíÓóÚúÜü\s]+$/; 
 
 btnContactoEnviar.addEventListener("click", function(event) 
 { 
     event.preventDefault();
     let validos=0;
-    
-    let emailConfirmar = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    let telefonoConfirmar = /[0-9]{2}-[0-9]{4}-[0-9]{4}/;
-    let nombreConfirmar =/^[a-zA-Z-ZÑñÁáÉéÍíÓóÚúÜü\s]+$/; 
 
-    let exampleFormControlInput1=document.getElementById("exampleFormControlInput1");
-    let exampleFormControlInput2=document.getElementById("exampleFormControlInput2");
-    let exampleFormControlInput3=document.getElementById("exampleFormControlInput3");
-    let exampleFormControlTextarea1=document.getElementById("exampleFormControlTextarea1");
+    let nameFrom=document.getElementById("exampleFormControlInput1");
+    let emailFrom=document.getElementById("exampleFormControlInput2");
+    let cellPhone=document.getElementById("exampleFormControlInput3");
+    let emailBody=document.getElementById("exampleFormControlTextarea1");
 
     let alertError = document.getElementById("alertError");
-    exampleFormControlTextarea1.value= exampleFormControlTextarea1.value.trim(); 
+    emailBody.value= emailBody.value.trim(); 
     alertError.style.display="none";
     alertError.innerHTML = "";
 
    //---------------Nombre-------------------------------
-   if (exampleFormControlInput1.value.match(nombreConfirmar)==null)
+   if (nameFrom.value.match(nombreConfirmar)==null)
    {
      alertError.style.display="block";
      alertError.innerHTML += "<br/> El nombre no es valido.";
-     exampleFormControlInput1.style.border = "solid red 1px";
+     nameFrom.style.border = "solid red 1px";
      
    }
    else
    {
-    exampleFormControlInput1.style.border = "solid green 1px"
+    nameFrom.style.border = "solid green 1px"
     validos++;
    }
 
     //-------------------correo-------------------------
-    if (exampleFormControlInput2.value.match(emailConfirmar)==null)
+    if (emailFrom.value.match(emailConfirmar)==null)
   {
     alertError.style.display="block";
     alertError.innerHTML += "<br/> El correo electronico no es valido.";
-    exampleFormControlInput2.style.border = "solid red 1px";
+    emailFrom.style.border = "solid red 1px";
     
   }
   else
   {
-    exampleFormControlInput2.style.border = "solid green 1px"
+    emailFrom.style.border = "solid green 1px"
     validos++;
   }
    //------------------numero telefonico----------
-  if(exampleFormControlInput3.value.match(telefonoConfirmar)==null)
+  if(cellPhone.value.match(telefonoConfirmar)==null)
   {
     alertError.style.display="block";
     alertError.innerHTML += "<br/> Ingresa un número valido";
-    exampleFormControlInput3.style.border = "solid red 1px";
+    cellPhone.style.border = "solid red 1px";
     
   }
   else{
-    exampleFormControlInput3.style.border = "solid green 1px";
+    cellPhone.style.border = "solid green 1px";
     validos++;
 }
 if ((idTimeout!=undefined) && (idTimeout!=null))
@@ -65,12 +73,31 @@ if ((idTimeout!=undefined) && (idTimeout!=null))
   }
 
   if (validos == 3){
+    Email.send({
+      SecureToken : "0d441985-cdef-4941-9931-d30a7ed8bde4",
+      To : correos,
+      From : `webosgeneration@gmail.com`,
+      Subject : `${nameFrom.value} te ha enviado un mensaje.`,
+      Body : `${emailBody.value}
+              <br>
+              <br>
+              Informacion de contacto
+              <br>
+              <br>
+              ${emailFrom.value}<br> 
+              ${cellPhone.value}`
+  }).then(
+    message => alert(message)
+  );
     idTimeout =  setTimeout(function()
     {
-      exampleFormControlInput1.style.border="";
-      exampleFormControlInput2.style.border="";
-      exampleFormControlInput3.style.border="";
+      nameFrom.style.border="";
+      emailFrom.style.border="";
+      cellPhone.style.border="";
     }, 3000);
+    nameFrom.value = "";
+    emailFrom.value = "";
+    cellPhone.value = "";
+    emailBody.value = "";
   }
-
 });
