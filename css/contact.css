@@ -5,9 +5,16 @@
 
 body {
     font-family: "Exo", sans-serif;
+    display: grid;
 }
 
 textarea:focus, input:focus{
     outline: none;
 }
 
+#contactUs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
