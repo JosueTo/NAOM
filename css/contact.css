@@ -11,3 +11,49 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+#contactUs{
+    height: auto;
+}
+
+.box {
+    height: 5vh;
+}
+
+#banner{
+    display: flex;
+    height: auto;
+}
+
+.row{
+    height: 65vh;
+}
+
+@media(min-width:320px){
+    .row{
+        font-size: 0.9em;
+    }
+}
+
+@media(min-width:768px){
+    .row{
+        font-size: 1.1em;
+    }
+}
+
+@media(min-width:1024px){
+    .row{
+        font-size: 1.6em;
+        justify-content: space-around;
+    }
+
+    .box{
+        height: 6vh;
+        font-size: 30px;
+    }
+
+    #formContact{
+        width: 25vw;
+    }
+
+}
+
