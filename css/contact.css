@@ -13,7 +13,11 @@ textarea:focus, input:focus{
 
 #banner{
     display: flex;
-    height: auto;
+    background-image:url("/Fotos_pagina/pink-makeup.png");
+    background-size: cover;
+    min-height: 200px;
+    background-position: center;
+    
 }
 
 @media(min-width:320px){
