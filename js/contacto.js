@@ -12,17 +12,19 @@ let correos = ["gbastoa17@gmail.com",
 let emailConfirmar = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 let telefonoConfirmar = /[0-9]{2}-[0-9]{4}-[0-9]{4}/;
 let nombreConfirmar =/^[a-zA-Z-ZÑñÁáÉéÍíÓóÚúÜü\s]+$/; 
+let msjConfirmar =/^[a-zA-Z-ZÑñÁáÉéÍíÓóÚúÜü\s]+$/; 
+
+let nameFrom=document.getElementById("exampleFormControlInput1");
+let emailFrom=document.getElementById("exampleFormControlInput2");
+let cellPhone=document.getElementById("exampleFormControlInput3");
+let emailBody=document.getElementById("exampleFormControlTextarea1");
 
 btnContactoEnviar.addEventListener("click", function(event) 
 { 
     event.preventDefault();
     let validos=0;
 
-    let nameFrom=document.getElementById("exampleFormControlInput1");
-    let emailFrom=document.getElementById("exampleFormControlInput2");
-    let cellPhone=document.getElementById("exampleFormControlInput3");
-    let emailBody=document.getElementById("exampleFormControlTextarea1");
-
+    
     let alertError = document.getElementById("alertError");
     emailBody.value= emailBody.value.trim(); 
     alertError.style.display="none";
@@ -67,12 +69,24 @@ btnContactoEnviar.addEventListener("click", function(event)
     cellPhone.style.border = "solid green 1px";
     validos++;
 }
+//---------------------mensaje-----------------------
+  if (emailBody.value.match(msjConfirmar) == null) {
+    alertError.style.display="block";
+    alertError.innerHTML +="</br> Completa el campo de mensaje";
+    emailBody.style.border = "solid red 1px"
+  }
+  else
+  {
+    emailBody.style.border = "solid green 1px";
+    validos++;
+  }
+//-----------------TimeOut--------
 if ((idTimeout!=undefined) && (idTimeout!=null))
   {
     clearTimeout(idTimeout);
   }
 
-  if (validos == 3){
+  if (validos == 4){
     Email.send({
       SecureToken : "0d441985-cdef-4941-9931-d30a7ed8bde4",
       To : correos,
@@ -87,7 +101,7 @@ if ((idTimeout!=undefined) && (idTimeout!=null))
               ${emailFrom.value}<br> 
               ${cellPhone.value}`
   }).then(
-    message => alert(message)
+    message => alert("Su mensaje fue enviado exitosamente. Pronto nos contactaremos.")
   );
     idTimeout =  setTimeout(function()
     {
@@ -100,4 +114,13 @@ if ((idTimeout!=undefined) && (idTimeout!=null))
     cellPhone.value = "";
     emailBody.value = "";
   }
+});
+
+cellPhone.addEventListener("keypress", (event) => {
+  if(cellPhone.value.length == 2){
+    cellPhone.value += '-';
+  }else if(cellPhone.value.length == 7){
+    cellPhone.value += '-';
+  }
+  // do something
 });
