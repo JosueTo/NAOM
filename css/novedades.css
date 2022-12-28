@@ -1,0 +1,29 @@
+#banner{
+    display: flex;
+    background-image:url(/Fotos_pagina/pink-makeup-1611776547\ \(1\).png);
+    background-size: cover;
+    min-height: 250px;
+    background-position: center;
+}
+
+#list-items{
+    display: flex;
+}
+
+.card{
+    border: 0;
+    
+}
+
+.card-img-top{
+    border-radius: 50%;
+}
+
+.card-title{
+    text-align: center;
+    transform: bold;
+}
+
+.card-text{
+    text-align: center;
+}
