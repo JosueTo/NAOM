@@ -1,11 +1,11 @@
-#banner{
-    display: flex;
-    background-image:url(/Fotos_pagina/pink-makeup-1611776547\ \(1\).png);
-    background-size: cover;
-    min-height: 250px;
-    background-position: center;
+.c-item{
+height: 250px ;
 }
+.c-img{
+    height: 100%;
+    object-fit: cover;
 
+}
 #list-items{
     display: flex;
 }
