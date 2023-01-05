@@ -9,7 +9,9 @@ input[type="search"]::-webkit-search-results-decoration {
     font-family: Exo;
     src: url(../fonts/static/Exo-SemiBold.ttf);
 }
-
+body{
+    font-family: Exo;
+}
 nav{
     background-color: #FAFAFA;
     font-family: Exo;
