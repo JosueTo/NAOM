@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +8,11 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="../js/formProducts.js" defer></script>
 </head>
 
 <body>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-xl bg-light">
         <div class="container-fluid">
@@ -64,12 +63,12 @@
     <!-- Formulario -->
     <div class="alert alert-danger" role="alert" style="display: none;" id="alertError2">
     </div>
-    <div class="mx-2 my-2" id="formulario">
+    <div class="mx-2 my-4" id="formulario">
         <form class="row justify-content-around" action="" id="form">
             <div class="col-lg-7 form-outline mb-2">
-                <label class="form-label" for="form0"></label>
+                <label class="form-label" for="form0">URL Foto</label>
                 <img id="editImage" width="200px" />
-                <input type="file" name="file" id="form0" class="form-control mt-2" accept="image/*" />
+                <input type="text" name="file" id="form0" class="form-control mt-2" />
             </div>
             <div class="col-lg-7 form-outline mb-2">
                 <label class="form-label" for="form1">Nombre del producto</label>

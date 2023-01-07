@@ -2,6 +2,10 @@ footer{
     color: #FFF;
 }
 
+body{
+    
+}
+
 @media(min-width:1024px){
     footer{
         font-size: 1.2em;
