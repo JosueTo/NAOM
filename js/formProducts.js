@@ -1,17 +1,37 @@
 let form = document.getElementById("form");
 let alertError2 = document.getElementById("alertError2");
+let img = document.getElementById("form0");
+let name1 = document.getElementById("form1");
+let price = document.getElementById("form2");
+let description = document.getElementById("form3");
+let stock = document.getElementById("form4");
+let prevImg = document.getElementById("prevImg");
+let image;
 
+function encodeImageFileAsURL(element) {
+  let file = element.files[0];
+  let reader = new FileReader();
+  reader.onloadend = function() {
+    image = reader.result;
+    prevImg.src = reader.result;
+  }
+  reader.readAsDataURL(file);
+}
 
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   alertError2.innerHTML = "";
   alertError2.style.display="none";
-  const data = new FormData(e.target);
-  const product = Object.fromEntries(data.entries());
+
 
   let valido = true;
-  //console.log(parseInt(value.price))
+
+  let product = {"name":`${name1.value}`,
+      "price":`${price.value}`,
+      "description":`${description.value}`,
+      "stock":`${stock.value}`,
+      "file":`${image}`}
 
   if (product.name.length < 3 || product.name.length > 20)
   {
@@ -41,7 +61,6 @@ form.addEventListener("submit", (e) => {
     alertError2.style.display="block";
     alertError2.innerHTML += "<br/>Ingresa productos disponibles";
   }
-
 
   if(valido){
     localStorage.setItem("product", JSON.stringify(product));

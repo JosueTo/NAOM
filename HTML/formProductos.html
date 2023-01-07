@@ -65,10 +65,10 @@
     </div>
     <div class="mx-2 my-4" id="formulario">
         <form class="row justify-content-around" action="" id="form">
-            <div class="col-lg-7 form-outline mb-2">
-                <label class="form-label" for="form0">URL Foto</label>
-                <img id="editImage" width="200px" />
-                <input type="text" name="file" id="form0" class="form-control mt-2" />
+            <div class="col-lg-7 form-outline mb-2 text-center">
+                <label class="form-label" for="form0"></label>
+                <img id="prevImg" width="200px" />
+                <input type="file" name="file" id="form0" onchange="encodeImageFileAsURL(this)" class="form-control mt-2" />
             </div>
             <div class="col-lg-7 form-outline mb-2">
                 <label class="form-label" for="form1">Nombre del producto</label>
