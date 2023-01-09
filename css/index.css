@@ -74,10 +74,14 @@ body {
 
 .swiper-button-next {
   right: 26px !important;
+  margin-top: 300px;
+  color: black;
 }
 
 .swiper-button-prev {
   left: 26px !important;
+  margin-top: 300px;
+  color: black;
 }
 
 .card-body a {

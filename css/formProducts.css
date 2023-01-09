@@ -1,0 +1,27 @@
+body .form-control {
+    border-radius: 0;
+    border: 1px black solid;
+}
+
+#btnProduct{
+    background-color: #EFCFCF;
+    color: black;
+    border-radius: 5%;
+    border: 0;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+#btnProductCancel{
+    background-color: black;
+    color: #ffffff;
+    border-radius: 5%;
+    border: 0;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+#prevImg{
+    border-radius: 20%;
+    border: 1px black solid;
+}

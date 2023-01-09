@@ -12,14 +12,13 @@ function addItem(product) {
     `
     <div class="swiper-slide">
     <img src="${product.file}" "class="card-img-top" alt="image">
-    <div class="card-body">
+    <div class="card-body"><br>
         <h5 class="card-title">${product.name}</h5>
         <p class="card-text">${product.description}</p>
         <a href="#" class="btn btn-light" type="submit" style="background-color: #EFCFCF;">Agregar al carrito</a>
     </div>
     </div>
     `;
-
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += itemHTML;
 }
