@@ -6,9 +6,9 @@ height: 250px ;
     object-fit: cover;
 
 }
-#list-items{
+/* #list-items{
     display: flex;
-}
+} */
 
 .card{
     border: 0;
