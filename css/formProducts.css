@@ -25,3 +25,7 @@ body .form-control {
     border-radius: 20%;
     border: 1px black solid;
 }
+
+.row{
+    margin-right: 0;
+}
