@@ -62,14 +62,9 @@ let swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
             spaceBetween: 40,
         },
-        920: {
+        1200: {
             slidesPerView: 5,
             spaceBetween: 40,
         },
-        1240: {
-            slidesPerView: 5,
-            spaceBetween: 50,
-        },
-
     }
 });
