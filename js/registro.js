@@ -97,6 +97,7 @@ else {
 if ((idTimeOut!=undefined) && (idTimeOut!=null)) {
     clearTimeout(idTimeout);
   }
+  
   let registro = {"nombre":`${nombre.value}`,
   "apellido":`${apellido.value}`,
   "email":`${email.value}`,
