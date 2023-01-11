@@ -3,10 +3,9 @@ function getAllProducts() {
     fetch('../js/products.json')
         .then(response => response.json()).then(data => {
             data.products.forEach(product => {
-                productList.push(product);
+                addItem(product);
             })
-            localStorage.setItem("product", JSON.stringify(productList));
-            });
+        });
 }
 
 function addItem(product) {
@@ -34,13 +33,14 @@ function addItem(product) {
 
 
 window.addEventListener("load", () => {
-    if(!localStorage.getItem("product")){
-        getAllProducts();
-    }
-    let productList = JSON.parse(localStorage.getItem("product"));
-    productList.forEach(product => {
+    getAllProducts();
+    if(localStorage.getItem("product")){
+        let productList = JSON.parse(localStorage.getItem("product"));
+        productList.forEach(product => {
         addItem(product)
-    });
+        });
+    }
+    
 });
 
 

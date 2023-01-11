@@ -8,6 +8,7 @@ let stock = document.getElementById("form4");
 let prevImg = document.getElementById("prevImg");
 let btnProductCancel = document.getElementById("btnProductCancel");
 let btnProduct = document.getElementById("btnProduct");
+let alertSuccess = document.getElementById("alertSuccess");
 let image;
 
 function encodeImageFileAsURL(element) {
@@ -25,6 +26,8 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   alertError2.innerHTML = "";
   alertError2.style.display="none";
+  alertSuccess.innerHTML = "";
+  alertSuccess.style.display="none";
 
 
   let valido = true;
@@ -39,7 +42,7 @@ form.addEventListener("submit", (e) => {
   {
     valido = false;
     alertError2.style.display="block";
-    alertError2.innerHTML += "<br/> El nombre debe contener entre 3-20 caracteres";
+    alertError2.innerHTML += "El nombre debe contener entre 3-20 caracteres";
   }
 
   
@@ -65,10 +68,23 @@ form.addEventListener("submit", (e) => {
   }
 
   if(valido){
-    let productList = JSON.parse(localStorage.getItem("product"));
-    productList.push(product);
-    localStorage.setItem("product", JSON.stringify(productList));
-    window.location = '/';
+    if(localStorage.getItem("product")){
+      let productList = JSON.parse(localStorage.getItem("product"));
+      productList.push(product);
+      localStorage.setItem("product", JSON.stringify(productList));
+      alertSuccess.style.display="block";
+      alertSuccess.innerHTML += "Se agregó el producto correctamente."
+      form.reset();
+      prevImg.src = "../Fotos_pagina/photo-camera.png";
+    }else{
+      let productList = [product];
+      localStorage.setItem("product",JSON.stringify(productList))
+      alertSuccess.style.display="block";
+      alertSuccess.innerHTML += "Se agregó el producto correctamente."
+      form.reset();
+      prevImg.src = "../Fotos_pagina/photo-camera.png";
+    }
+    
   }
 })
 
