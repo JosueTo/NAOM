@@ -13,6 +13,7 @@
 }
 body{
     font-family: Exo;
+    height: 100vh;
 }
 nav{
     background-color: #FAFAFA;

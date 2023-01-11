@@ -1,0 +1,27 @@
+#leftBox {
+    height: 80vh;
+    width: 20%;
+    position: sticky;
+    display: none;
+}
+
+#mainContainer {
+    margin-right: 50;
+    margin-left: 50;
+}
+
+#leftBoxBottom{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 500px;
+}
+
+#leftBoxBottom input{
+    width: 70px;
+}
+
+#precio{
+    position: relative;
+    top:510px;
+}
