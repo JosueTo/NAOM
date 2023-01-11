@@ -11,6 +11,11 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+.box .form-control {
+    border-radius: 0;
+    border: 1px black solid;
+}
+
 #banner{
     display: flex;
     background-image:url("/Fotos_pagina/pink-makeup.png");

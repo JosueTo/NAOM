@@ -1,5 +1,10 @@
 body {
   min-height: 100vh;
+
+}
+
+h1{
+  font-family: ExoBold;
 }
 
 .cards-wrapper {

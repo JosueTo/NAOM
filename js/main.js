@@ -15,7 +15,7 @@ function addItem(product) {
     <div class="card-body"><br>
         <h5 class="card-title">${product.name}</h5>
         <p class="card-text">${product.description}</p>
-        <a href="#" class="btn btn-light" type="submit" style="background-color: #EFCFCF;">Agregar al carrito</a>
+        <a href="#" class="btn btn-light" type="submit" style="background-color: #EFCFCF;"><strong>Agregar al carrito</strong></a>
     </div>
     </div>
     `;
