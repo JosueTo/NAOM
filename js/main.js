@@ -1,10 +1,12 @@
 function getAllProducts() {
+    let productList = [];
     fetch('../js/products.json')
         .then(response => response.json()).then(data => {
             data.products.forEach(product => {
-                addItem(product);
+                productList.push(product);
+            })
+            localStorage.setItem("product", JSON.stringify(productList));
             });
-        })
 }
 
 function addItem(product) {
@@ -16,11 +18,13 @@ function addItem(product) {
     <div class="hearts-outer">
             <div class="hearts-inner" style="width:100%;"></div>
         </div>
-        <div class="card-title">${product.name.slice(0,53)}...</div>
+        <div class="card-title">
+        <p class="card-title">${product.name.slice(0,53)}...</p>
+        </div>
 
-        <div class="card-price mb-2">$500</div>
-        <a href="#" class="btn btn-light" type="submit" id="addCartProd" style="background-color: #EFCFCF;"><strong>Agregar al carrito</strong></a>
+        <div class="card-price">$500</div>
     </div>
+    <a href="#" class="btn btn-light addCartProd mt-1 mb-2 position-relative bottom-0" type="submit" style="background-color: #EFCFCF;"><strong>Agregar al carrito</strong></a>
     </div>
     `;
     const itemsContainer = document.getElementById("list-items");
@@ -30,9 +34,13 @@ function addItem(product) {
 
 
 window.addEventListener("load", () => {
-    getAllProducts();
+    if(!localStorage.getItem("product")){
+        getAllProducts();
+    }
     let productList = JSON.parse(localStorage.getItem("product"));
-    productList.forEach(product => addItem(product));
+    productList.forEach(product => {
+        addItem(product)
+    });
 });
 
 

@@ -65,16 +65,10 @@ form.addEventListener("submit", (e) => {
   }
 
   if(valido){
-    if(localStorage.getItem("product")){
-      let productList = JSON.parse(localStorage.getItem("product"));
-      productList.push(product);
-      localStorage.setItem("product", JSON.stringify(productList));
-      window.location = '/';
-    }else{
-      let productList = [product];
-      localStorage.setItem("product", JSON.stringify(productList));
-      window.location = '/';
-    }
+    let productList = JSON.parse(localStorage.getItem("product"));
+    productList.push(product);
+    localStorage.setItem("product", JSON.stringify(productList));
+    window.location = '/';
   }
 })
 

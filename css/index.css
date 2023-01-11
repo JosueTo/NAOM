@@ -127,17 +127,24 @@ h1{
   color: #6C4AB6;
 }
 
-#addCartProd{
+.addCartProd{
   position: relative;
+  display: flex;
+  justify-content: space-around;
   bottom: 0;
 }
 
 .card-title{
-  height: 50px;
+  min-height: 108px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .card-price{
   font-family: ExoBold;
   color: #6C4AB6;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
