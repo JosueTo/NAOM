@@ -27,8 +27,8 @@ function addItem(product) {
 
 window.addEventListener("load", () => {
     getAllProducts();
-    let product = JSON.parse(localStorage.getItem("product"));
-    addItem(product);
+    let productList = JSON.parse(localStorage.getItem("product"));
+    productList.forEach(product => addItem(product));
 });
 
 

@@ -6,6 +6,8 @@ let price = document.getElementById("form2");
 let description = document.getElementById("form3");
 let stock = document.getElementById("form4");
 let prevImg = document.getElementById("prevImg");
+let btnProductCancel = document.getElementById("btnProductCancel");
+let btnProduct = document.getElementById("btnProduct");
 let image;
 
 function encodeImageFileAsURL(element) {
@@ -63,8 +65,27 @@ form.addEventListener("submit", (e) => {
   }
 
   if(valido){
-    localStorage.setItem("product", JSON.stringify(product));
+    if(localStorage.getItem("product")){
+      let productList = JSON.parse(localStorage.getItem("product"));
+      productList.push(product);
+      localStorage.setItem("product", JSON.stringify(productList));
+      window.location = '/';
+    }else{
+      let productList = [product];
+      localStorage.setItem("product", JSON.stringify(productList));
+      window.location = '/';
+    }
   }
 })
+
+btnProductCancel.addEventListener("click", (e) => {
+  e.preventDefault();
+  name1.value = "";
+  price.value = "";
+  description.value = "";
+  stock.value = "";
+  img = undefined;
+  prevImg.src = "../Fotos_pagina/photo-camera.png";
+});
 
 
