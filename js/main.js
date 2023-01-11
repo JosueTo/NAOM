@@ -13,9 +13,13 @@ function addItem(product) {
     <div class="swiper-slide">
     <img src="${product.file}" "class="card-img-top" alt="image">
     <div class="card-body"><br>
-        <h5 class="card-title">${product.name}</h5>
-        <p class="card-text">${product.description}</p>
-        <a href="#" class="btn btn-light" type="submit" style="background-color: #EFCFCF;"><strong>Agregar al carrito</strong></a>
+    <div class="hearts-outer">
+            <div class="hearts-inner" style="width:100%;"></div>
+        </div>
+        <div class="card-title">${product.name.slice(0,53)}...</div>
+
+        <div class="card-price mb-2">$500</div>
+        <a href="#" class="btn btn-light" type="submit" id="addCartProd" style="background-color: #EFCFCF;"><strong>Agregar al carrito</strong></a>
     </div>
     </div>
     `;
