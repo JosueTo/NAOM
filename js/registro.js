@@ -65,6 +65,7 @@ else {
   } else {
     alertErrorPassword.style.display = "none";
     password.style.border = "solid green 1px";
+    validos++;
   }
 
   if (password.value != confirmPassword.value) {
@@ -75,6 +76,7 @@ else {
     alertConfPassword.style.display = "none";
     password.style.border = "solid green 1px";
     confirmPassword.style.border = "solid green 1px";
+    validos++;
   }
 
 
@@ -95,6 +97,25 @@ else {
 if ((idTimeOut!=undefined) && (idTimeOut!=null)) {
     clearTimeout(idTimeout);
   }
+  let registro = {"nombre":`${nombre.value}`,
+  "apellido":`${apellido.value}`,
+  "email":`${email.value}`,
+  "telefono":`${tel.value}`,
+  "contraseña":`${password.value}`}
+
+  if(validos==6){
+    if(localStorage.getItem("registro")){
+      let registroList = JSON.parse(localStorage.getItem("registro"));
+      registroList.push(registro);
+      localStorage.setItem("registro", JSON.stringify(registroList));
+      window.location = '/';
+    }else{
+      let registroList = [registro];
+      localStorage.setItem("registro", JSON.stringify(registroList));
+      window.location = '/';
+    }
+  }
+
 });
 
 tel.addEventListener("keypress", (event) => {
@@ -105,3 +126,6 @@ if(tel.value.length == 2){
 }
 // do something
 });
+
+
+    
