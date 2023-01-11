@@ -1,7 +1,7 @@
 let idTimeOut;
 let btnRegistro=document.getElementById("btnRegistro");
 let emailConfirmar = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-let telefonoConfirmar = /[^0]{1}[0-9]{2}-[0-9]{4}-[0-9]{4}/;
+let telefonoConfirmar = /[^0]{1}[0-9]{1}-[0-9]{4}-[0-9]{4}/;
 let nombreConfirmar =/^[a-zA-Z-ZÑñÁáÉéÍíÓóÚúÜü\s]+$/;
 let apellidoConfirmar=/^[a-zA-Z-ZÑñÁáÉéÍíÓóÚúÜü\s]+$/;
 
