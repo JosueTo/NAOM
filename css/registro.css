@@ -39,8 +39,16 @@ main .form-control {
 }
 
 
-main .form-control{
+main .form-input{
     margin-bottom: 30px;
     margin-top: 30px;
 }
 
+.alertRegistro {
+    color: red;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+}

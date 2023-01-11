@@ -51,33 +51,38 @@
 
     
      <main class="container ">
-      <div class="alert alert-danger" id="alertError" style="display: none;" role="alert">
       </div>
         <h1 class="mt-5">CREA TU CUENTA</h1>
     <p>¡Crea tu cuenta para recibir en exclusiva nuestras ofertas, nuevos productos y más! </p>
     <form>
         <div class="row justify-content-around mt-5" id="Cuenta">
-          <div class="col-lg-4 col-sm-8"><label><strong>Nombre:</strong></label>
+          <div class="col-lg-4 col-sm-8 form-input"><label><strong>Nombre:</strong></label>
             <input type="text" class="form-control" placeholder="Nombre" id="nombre">
+            <div class="alertRegistro" id="alertNombre" style="display: none;">El nombre no es válido</div>
           </div>
-          <div class="col-lg-4 col-sm-8"><label><strong>Apellido:</strong></label>
+          <div class="col-lg-4 col-sm-8 form-input"><label><strong>Apellido:</strong></label>
             <input type="text" class="form-control" placeholder="Apellido" id="apellido">
+            <div class="alertRegistro" id="alertApellido" style="display: none;">El apellido no es válido</div>
           </div>
         </div>
         <div class="row justify-content-around">
-            <div class="col-lg-4 col-sm-8"><label><strong>Correo:</strong></label>
-              <input type="text" class="form-control" placeholder="name@example.com" id="email">
+            <div class="col-lg-4 col-sm-8 form-input"><label><strong>Correo:</strong></label>
+              <input type="email" class="form-control" placeholder="name@example.com" id="email">
+              <div class="alertRegistro" id="alertCorreo" style="display: none;">El correo electrónico no es válido</div>
             </div>
           
-            <div class="col-lg-4 col-sm-8"><label><strong>Teléfono:</strong></label>
-              <input type="tel" class="form-control" placeholder="Teléfono" id="tel">
+            <div class="col-lg-4 col-sm-8 form-input"><label><strong>Teléfono:</strong></label>
+              <input type="tel" maxlength="12" class="form-control" placeholder="Teléfono" id="tel">
+              <div class="alertRegistro" id="alertTel" style="display: none;">Ingresa un número válido</div>
             </div>
             <div class="row justify-content-around">
-            <div class="col-lg-4 col-sm-8"><label><strong>Contraseña:</strong></label>
-              <input type="password" class="form-control" placeholder="Contraseña">
+            <div class="col-lg-4 col-sm-8 form-input"><label><strong>Contraseña:</strong></label>
+              <input type="password" class="form-control" id="password" placeholder="Contraseña:" >
+              <div class="alertRegistro" id="alertErrorPassword" style="display: none;">Mínimo 6 caracteres requeridos </div>
             </div>
-            <div class="col-lg-4 col-sm-8"><label><strong>Confirmar contraseña:</strong></label>
-              <input type="password" class="form-control" placeholder="Confirmar contraseña">
+            <div class="col-lg-4 col-sm-8 form-input"><label><strong>Confirmar contraseña:</strong></label>
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmar contraseña:">
+              <div class="alertRegistro" id="alertConfPassword" style="display: none;">Las contraseñas no coinciden </div>
             </div>
           </div>
           <div class="row justify-content-around">

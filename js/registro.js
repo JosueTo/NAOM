@@ -1,9 +1,18 @@
 let idTimeOut;
+let password = document.getElementById("password");
+let confirmPassword = document.getElementById("confirmPassword");
 let btnRegistro=document.getElementById("btnRegistro");
 let emailConfirmar = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 let telefonoConfirmar = /[^0]{1}[0-9]{1}-[0-9]{4}-[0-9]{4}/;
 let nombreConfirmar =/^[a-zA-Z-ZÑñÁáÉéÍíÓóÚúÜü\s]+$/;
 let apellidoConfirmar=/^[a-zA-Z-ZÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+
+let alertErrorPassword = document.getElementById("alertErrorPassword");
+let alertConfPassword = document.getElementById("alertConfPassword");
+let alertNombre = document.getElementById("alertNombre");
+let alertApellido = document.getElementById("alertApellido");
+let alertCorreo = document.getElementById("alertCorreo");
+let alertTel = document.getElementById("alertTel");
 
 let nombre=document.getElementById("nombre");
 let apellido=document.getElementById("apellido");
@@ -13,71 +22,77 @@ btnRegistro.addEventListener("click",function(event){
     event.preventDefault();
     let validos=0;
 
-    
-    let alertError = document.getElementById("alertError");
-    email.value= email.value.trim(); 
-    alertError.style.display="none";
-    alertError.innerHTML = "";
+
 //---------------Nombre-------------------------------
-if (nombre.value.match(nombreConfirmar)==null)
-{
-  alertError.style.display="block";
-  alertError.innerHTML += "<br/> El nombre no es válido.";
+if (nombre.value.match(nombreConfirmar)==null) {
+  alertNombre.style.display="block";
   nombre.style.border = "solid red 1px";
-  
 }
-else
-{
- nombre.style.border = "solid green 1px"
- validos++;
+else {
+  nombre.style.border = "solid green 1px"
+  alertNombre.style.display = "none";
+  validos++;
 }
 //---------------Apellido-------------------------------
-if (apellido.value.match(apellidoConfirmar)==null)
-{
-  alertError.style.display="block";
-  alertError.innerHTML += "<br/> El apellido no es válido.";
+if (apellido.value.match(apellidoConfirmar)==null) {
+  alertApellido.style.display="block";
   apellido.style.border = "solid red 1px";
   
 }
-else
-{
- apellido.style.border = "solid green 1px"
- validos++;
+else {
+  apellido.style.border = "solid green 1px"
+  alertApellido.style.display = "none";
+  validos++;
 }
 
 //------------------numero telefonico----------
-if(tel.value.match(telefonoConfirmar)==null)
-{
- alertError.style.display="block";
- alertError.innerHTML += "<br/> Ingresa un número válido";
- tel.style.border = "solid red 1px";
- 
+if(tel.value.match(telefonoConfirmar)==null) {
+  alertTel.style.display="block";
+  tel.style.border = "solid red 1px";
+
 }
-else{
- tel.style.border = "solid green 1px";
- validos++;
+else {
+  tel.style.border = "solid green 1px";
+  alertTel.style.display = "none";
+  validos++;
+}
+
+//---------------Contraseñas
+
+  if (password.value.length < 6) {
+    alertErrorPassword.style.display="block";
+    password.style.border = "solid red 1px";
+  } else {
+    alertErrorPassword.style.display = "none";
+    password.style.border = "solid green 1px";
+  }
+
+  if (password.value != confirmPassword.value) {
+    alertConfPassword.style.display="block";
+    password.style.border = "solid red 1px";
+    confirmPassword.style.border = "solid red 1px";
+  } else if(password.value.length >= 6 && confirmPassword.value.length >= 6) {
+    alertConfPassword.style.display = "none";
+    password.style.border = "solid green 1px";
+    confirmPassword.style.border = "solid green 1px";
+  }
+
+
+
+
+//---------Email---------
+if (email.value.match(emailConfirmar)==null) {
+  alertCorreo.style.display="block";
+  email.style.border = "solid red 1px";
+}
+else {
+  email.style.border = "solid green 1px"
+  alertCorreo.style.display = "none";
+  validos++;
 }
 
 //-----------------TimeOut--------
-if ((idTimeout!=undefined) && (idTimeout!=null))
-{
- clearTimeout(idTimeout);
-}
-//---------Email---------
-if (email.value.match(emailConfirmar)==null)
-{
-  alertError.style.display="block";
-  alertError.innerHTML += "<br/> El correo electrónico no es válido.";
-  email.style.border = "solid red 1px";
-  
-}
-else
-{
-  email.style.border = "solid green 1px"
-  validos++;
-}
-if ((idTimeout!=undefined) && (idTimeout!=null))
-  {
+if ((idTimeOut!=undefined) && (idTimeOut!=null)) {
     clearTimeout(idTimeout);
   }
 });
