@@ -34,7 +34,7 @@ btnContactoEnviar.addEventListener("click", function(event)
    if (nameFrom.value.match(nombreConfirmar)==null)
    {
      alertError.style.display="block";
-     alertError.innerHTML += "<br/> El nombre no es valido.";
+     alertError.innerHTML += "<br/> El nombre no es válido.";
      nameFrom.style.border = "solid red 1px";
      
    }
@@ -48,7 +48,7 @@ btnContactoEnviar.addEventListener("click", function(event)
     if (emailFrom.value.match(emailConfirmar)==null)
   {
     alertError.style.display="block";
-    alertError.innerHTML += "<br/> El correo electronico no es valido.";
+    alertError.innerHTML += "<br/> El correo electrónico no es válido.";
     emailFrom.style.border = "solid red 1px";
     
   }
@@ -61,7 +61,7 @@ btnContactoEnviar.addEventListener("click", function(event)
   if(cellPhone.value.match(telefonoConfirmar)==null)
   {
     alertError.style.display="block";
-    alertError.innerHTML += "<br/> Ingresa un número valido";
+    alertError.innerHTML += "<br/> Ingresa un número válido";
     cellPhone.style.border = "solid red 1px";
     
   }
@@ -95,13 +95,13 @@ if ((idTimeout!=undefined) && (idTimeout!=null))
       Body : `${emailBody.value}
               <br>
               <br>
-              Informacion de contacto
+              Información de contacto
               <br>
               <br>
               ${emailFrom.value}<br> 
               ${cellPhone.value}`
   }).then(
-    message => alert("Su mensaje fue enviado exitosamente. Pronto nos contactaremos.")
+    message => alert("Su mensaje fue enviado exitosamente. Pronto nos contactáremos.")
   );
     idTimeout =  setTimeout(function()
     {

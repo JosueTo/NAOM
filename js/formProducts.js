@@ -47,14 +47,14 @@ form.addEventListener("submit", (e) => {
   {
     valido = false;
     alertError2.style.display="block";
-    alertError2.innerHTML += "<br/> Ingresa un precio valido";
+    alertError2.innerHTML += "<br/> Ingresa un precio válido";
   }
 
   if (product.description.length < 15)
   {
     valido = false;
     alertError2.style.display="block";
-    alertError2.innerHTML += "<br/> La descripcion debe contener mas de 15 caracteres";
+    alertError2.innerHTML += "<br/> La descripcion debe contener más de 15 caracteres";
   }
 
   if (parseInt(product.stock) < 0 || isNaN(parseInt(product.stock)) )
