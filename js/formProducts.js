@@ -1,5 +1,4 @@
 let form = document.getElementById("form");
-let alertError2 = document.getElementById("alertError2");
 let img = document.getElementById("form0");
 let name1 = document.getElementById("form1");
 let price = document.getElementById("form2");
@@ -10,6 +9,11 @@ let btnProductCancel = document.getElementById("btnProductCancel");
 let btnProduct = document.getElementById("btnProduct");
 let alertSuccess = document.getElementById("alertSuccess");
 let image;
+
+let alertName = document.getElementById("alertProductName");
+let alertPrice = document.getElementById("alertPrice");
+let alertDescription = document.getElementById("alertDescription");
+let alertStock = document.getElementById("alertAvailable");
 
 function encodeImageFileAsURL(element) {
   let file = element.files[0];
@@ -24,8 +28,6 @@ function encodeImageFileAsURL(element) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  alertError2.innerHTML = "";
-  alertError2.style.display="none";
   alertSuccess.innerHTML = "";
   alertSuccess.style.display="none";
 
@@ -41,30 +43,42 @@ form.addEventListener("submit", (e) => {
   if (product.name.length < 3 || product.name.length > 20)
   {
     valido = false;
-    alertError2.style.display="block";
-    alertError2.innerHTML += "El nombre debe contener entre 3-20 caracteres";
+    alertName.style.display="block";
+    name1.style.border = "solid red 1px";
+  } else {
+    name1.style.border = "solid green 1px";
+    alertName.style.display="none";
   }
 
   
   if (parseInt(product.price)<=0 || isNaN(parseInt(product.price)))
   {
     valido = false;
-    alertError2.style.display="block";
-    alertError2.innerHTML += "<br/> Ingresa un precio válido";
+    alertPrice.style.display="block";
+    price.style.border = "solid red 1px";
+  } else {
+    alertPrice.style.display="none";
+    price.style.border = "solid green 1px";
   }
 
   if (product.description.length < 15)
   {
     valido = false;
-    alertError2.style.display="block";
-    alertError2.innerHTML += "<br/> La descripcion debe contener más de 15 caracteres";
+    alertDescription.style.display="block";
+    description.style.border = "solid red 1px";
+  } else {
+    alertDescription.style.display="none";
+    description.style.border = "solid green 1px";
   }
 
   if (parseInt(product.stock) < 0 || isNaN(parseInt(product.stock)) )
   {
     valido = false;
-    alertError2.style.display="block";
-    alertError2.innerHTML += "<br/>Ingresa productos disponibles";
+    alertStock.style.display="block";
+    stock.style.border = "solid red 1px";
+  } else {
+    alertStock.style.display="none";
+    stock.style.border = "solid green 1px";
   }
 
   if(valido){
@@ -96,6 +110,14 @@ btnProductCancel.addEventListener("click", (e) => {
   stock.value = "";
   img = undefined;
   prevImg.src = "../Fotos_pagina/photo-camera.png";
+  alertName.style.display="none";
+  alertPrice.style.display="none";
+  alertDescription.style.display="none";
+  alertStock.style.display="none";
+  name1.style.border = "";
+  price.style.border = "";
+  description.style.border = "";
+  stock.style.border = "";
 });
 
 

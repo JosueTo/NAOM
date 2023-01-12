@@ -14,14 +14,14 @@ body .form-control {
     color: #1C315E;
     border-radius: 5%;
     border: 0;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     font-weight: bold;
 }
 
 #btnProduct:hover {
     background-color: white;
     border: 2px solid #EFCFCF;
-    padding: 0.4rem 0.85rem;
+    padding: 6px 14px;
 }
 
 #btnProductCancel{
@@ -29,7 +29,7 @@ body .form-control {
     color: #ffffff;
     border-radius: 5%;
     border: 0;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     font-weight: bold;
 }
 
@@ -47,4 +47,18 @@ body .form-control {
 
 .row{
     margin-right: 0;
+}
+
+.alertRegistro {
+    color: red;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+}
+
+
+form div {
+    margin-bottom: 2rem;
 }

@@ -57,32 +57,34 @@
     <!-- Titulo formulario -->
     <h1 class="my-5 text-center">Agregar productos</h1>
     <!-- Formulario -->
-    <div class="alert alert-danger" role="alert" style="display: none;" id="alertError2">
-    </div>
     <div class="alert alert-success" role="alert" style="display: none;" id="alertSuccess">
     </div>
     <form class="row justify-content-around" action="" id="form">
-        <div class="col-lg-7 form-outline mb-2 text-center">
+        <div class="col-lg-7 form-outline text-center">
             <label class="form-label" for="form0"></label>
             <img id="prevImg" width="200px" src="../Fotos_pagina/photo-camera.png" />
             <p class="mt-1">La imagen debe de tener una altura y ancho iguales. Ej. 160x160</p>
             <input type="file" name="file" id="form0" onchange="encodeImageFileAsURL(this)" class="form-control mt-2" />
         </div>
-        <div class="col-lg-7 form-outline mb-2">
+        <div class="col-lg-7 form-outline">
             <label class="form-label" for="form1">Nombre del producto</label>
             <input type="text" name="name" id="form1" class="form-control" />
+            <div class="alertRegistro" id="alertProductName" style="display: none;">El nombre debe contener entre 3-20 caracteres</div>
         </div>
-        <div class="col-lg-7 form-outline mb-2">
+        <div class="col-lg-7 form-outline">
             <label class="form-label" for="form2">Precio</label>
             <input type="number" step="0.01" name="price" id="form2" class="form-control" />
+            <div class="alertRegistro" id="alertPrice" style="display: none;">Ingresa un precio válido</div>
         </div>
-        <div class="form-outline mb-4 col-lg-7">
+        <div class="form-outline col-lg-7">
             <label class="form-label" for="form3">Descripción</label>
             <input type="text" name="description" id="form3" class="form-control" />
+            <div class="alertRegistro" id="alertDescription" style="display: none;">La descripción debe contener más de 15 caracteres</div>
         </div>
-        <div class="form-outline mb-4 col-lg-7">
+        <div class="form-outline col-lg-7">
             <label class="form-label" for="form4">Productos disponibles</label>
             <input type="number" step="0.01" name="stock" id="form4" class="form-control" />
+            <div class="alertRegistro" id="alertAvailable" style="display: none;">Ingresa productos disponibles</div>
         </div>
         <div class="form-outline mb-4 col-lg-7" id="buttons">
             <button type="submit" class="mx-2" id="btnProduct">Agregar producto</button>
