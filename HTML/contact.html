@@ -73,27 +73,26 @@
     
     <!-- FORMULARIO DE CONTACTO -->
     <div id="formContact" class="col-lg-5 col-sm-12">
-      <div class="alert alert-danger" id="alertError" style="display: none; margin-top: 20px;" role="alert"></div>
-      <br>
       <div class="box">
         <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
         <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Juan Pérez">
+        <div class="alertRegistro" id="alertName" style="display: none;">El nombre no es válido</div>
       </div>
-      <br>
       <div class="box">
         <label for="exampleFormControlInput1" class="form-label">Correo:</label>
         <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="nombre@ejemplo.com">
+        <div class="alertRegistro" id="alertEmail" style="display: none;">El correo electrónico no es válido</div>
       </div>
-      <br>
       <div class="box">
         <label for="exampleFormControlInput1" class="form-label">Teléfono:</label>
         <input type="tel" maxlength="12" class="form-control" id="exampleFormControlInput3" placeholder="Formato XX-XXXX-XXXX">
+        <div class="alertRegistro" id="alertTel" style="display: none;">Ingresa un número válido</div>
       </div>
-      <br>
       <div class="box">
         <label for="exampleFormControlTextarea1" class="form-label">Escribe tu mensaje:</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
           placeholder="Escribe tu mensaje"></textarea>
+          <div class="alertRegistro" id="alertMessage" style="display: none;">El nombre no es válido</div>
         <div class="pt-2 text-center">
           <button type="submit" id="btnContactoEnviar">Enviar</button>
         </div>

@@ -19,65 +19,70 @@ let emailFrom=document.getElementById("exampleFormControlInput2");
 let cellPhone=document.getElementById("exampleFormControlInput3");
 let emailBody=document.getElementById("exampleFormControlTextarea1");
 
+let alertName = document.getElementById("alertName");
+let alertEmail = document.getElementById("alertEmail");
+let alertTel = document.getElementById("alertTel");
+let alertMessage = document.getElementById("alertMessage");
+
 btnContactoEnviar.addEventListener("click", function(event) 
 { 
     event.preventDefault();
     let validos=0;
 
     
-    let alertError = document.getElementById("alertError");
+    // let alertError = document.getElementById("alertError");
     emailBody.value= emailBody.value.trim(); 
-    alertError.style.display="none";
-    alertError.innerHTML = "";
+    // alertError.style.display="none";
+    // alertError.innerHTML = "";
 
    //---------------Nombre-------------------------------
    if (nameFrom.value.match(nombreConfirmar)==null)
    {
-     alertError.style.display="block";
-     alertError.innerHTML += "El nombre no es válido.";
+     alertName.style.display="block";
      nameFrom.style.border = "solid red 1px";
      
    }
    else
    {
-    nameFrom.style.border = "solid green 1px"
+    nameFrom.style.border = "solid green 1px";
+    alertName.style.display="none";
     validos++;
    }
 
     //-------------------correo-------------------------
     if (emailFrom.value.match(emailConfirmar)==null)
   {
-    alertError.style.display="block";
-    alertError.innerHTML += "<br/> El correo electrónico no es válido.";
+    alertEmail.style.display="block";
     emailFrom.style.border = "solid red 1px";
     
   }
   else
   {
     emailFrom.style.border = "solid green 1px"
+    alertEmail.style.display="none";
     validos++;
   }
    //------------------numero telefonico----------
   if(cellPhone.value.match(telefonoConfirmar)==null)
   {
-    alertError.style.display="block";
-    alertError.innerHTML += "<br/> Ingresa un número válido";
+    alertTel.style.display="block";
     cellPhone.style.border = "solid red 1px";
     
   }
   else{
     cellPhone.style.border = "solid green 1px";
+    alertTel.style.display="none";
     validos++;
 }
 //---------------------mensaje-----------------------
   if (emailBody.value.match(msjConfirmar) == null) {
-    alertError.style.display="block";
-    alertError.innerHTML +="</br> Completa el campo de mensaje";
+    alertMessage.style.display="block";
     emailBody.style.border = "solid red 1px"
   }
   else
   {
     emailBody.style.border = "solid green 1px";
+    alertMessage.style.display="none";
     validos++;
   }
 //-----------------TimeOut--------

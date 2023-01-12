@@ -48,6 +48,23 @@ textarea:focus, input:focus{
     padding: 0.4rem 0.9rem;
 }
 
+.alertRegistro {
+    color: red;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.box {
+    margin-bottom: 2rem;
+}
+
+.box:first-child {
+    padding-top: 2rem;
+}
+
 @media(min-width:320px){
     .row{
         font-size: 0.9em;
