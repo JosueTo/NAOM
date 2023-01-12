@@ -1,3 +1,9 @@
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
 body .form-control {
     border-radius: 0;
     border: 1px black solid;
@@ -5,11 +11,17 @@ body .form-control {
 
 #btnProduct{
     background-color: #EFCFCF;
-    color: black;
+    color: #1C315E;
     border-radius: 5%;
     border: 0;
     padding: 0.5rem 1rem;
     font-weight: bold;
+}
+
+#btnProduct:hover {
+    background-color: white;
+    border: 2px solid #EFCFCF;
+    padding: 0.4rem 0.85rem;
 }
 
 #btnProductCancel{
@@ -19,6 +31,13 @@ body .form-control {
     border: 0;
     padding: 0.5rem 1rem;
     font-weight: bold;
+}
+
+#btnProductCancel:hover {
+    color: black;
+    background-color: #ffffff;
+    padding: 0.4rem 0.9rem;
+    border: 2px solid black;
 }
 
 #prevImg{

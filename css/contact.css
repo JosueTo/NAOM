@@ -5,6 +5,13 @@
 
 body {
     font-family: "Exo", sans-serif;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+main {
+    margin: 1rem 0;
 }
 
 textarea:focus, input:focus{
@@ -23,6 +30,22 @@ textarea:focus, input:focus{
     min-height: 200px;
     background-position: center;
     
+}
+
+#btnContactoEnviar {
+    margin-top: 1rem;
+    background-color: #EFCFCF;
+    color: #1C315E;
+    border-radius: 5%;
+    border: 0;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+#btnContactoEnviar:hover {
+    background-color: white;
+    border: 2px solid #EFCFCF;
+    padding: 0.4rem 0.9rem;
 }
 
 @media(min-width:320px){

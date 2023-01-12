@@ -8,6 +8,12 @@
     src: url(../fonts/static/Exo-Regular.ttf);
 }
 
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
 h1{
     text-align: center;
     font-family: ExoBold;
@@ -25,12 +31,17 @@ main .form-control {
 
 .btnRegistro {
     background-color: #EFCFCF;
-    color: black;
+    color: #1C315E;
     border-radius: 5%;
     border: 0;
     padding: 0.5rem 1rem;
     font-weight: bold;
+}
 
+.btnRegistro:hover {
+    background-color: white;
+    border: 2px solid #EFCFCF;
+    padding: 0.4rem 0.9rem;
 }
 
 .row > * {

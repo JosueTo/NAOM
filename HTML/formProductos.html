@@ -52,59 +52,59 @@
       </form>
     </div>
   </nav>
+    
+  <div class="mx-2 my-4" id="formulario">
     <!-- Titulo formulario -->
     <h1 class="my-5 text-center">Agregar productos</h1>
-    
     <!-- Formulario -->
     <div class="alert alert-danger" role="alert" style="display: none;" id="alertError2">
     </div>
     <div class="alert alert-success" role="alert" style="display: none;" id="alertSuccess">
     </div>
-    <div class="mx-2 my-4" id="formulario">
-        <form class="row justify-content-around" action="" id="form">
-            <div class="col-lg-7 form-outline mb-2 text-center">
-                <label class="form-label" for="form0"></label>
-                <img id="prevImg" width="200px" src="../Fotos_pagina/photo-camera.png" />
-                <p class="mt-1">La imagen debe de tener una altura y ancho iguales. Ej. 160x160</p>
-                <input type="file" name="file" id="form0" onchange="encodeImageFileAsURL(this)" class="form-control mt-2" />
-            </div>
-            <div class="col-lg-7 form-outline mb-2">
-                <label class="form-label" for="form1">Nombre del producto</label>
-                <input type="text" name="name" id="form1" class="form-control" />
-            </div>
-            <div class="col-lg-7 form-outline mb-2">
-                <label class="form-label" for="form2">Precio</label>
-                <input type="number" step="0.01" name="price" id="form2" class="form-control" />
-            </div>
-            <div class="form-outline mb-4 col-lg-7">
-                <label class="form-label" for="form3">Descripción</label>
-                <input type="text" name="description" id="form3" class="form-control" />
-            </div>
-            <div class="form-outline mb-4 col-lg-7">
-                <label class="form-label" for="form4">Productos disponibles</label>
-                <input type="number" step="0.01" name="stock" id="form4" class="form-control" />
-            </div>
-            <div class="form-outline mb-4 col-lg-7">
-                <button type="submit" class="btn btn-primary btn-block mx-2" id="btnProduct">Agregar producto</button>
-                <button type="button" class="btn btn-secondary mx-2" id="btnProductCancel">Cancelar</button>
-            </div>
-        </form>
-    </div>
+    <form class="row justify-content-around" action="" id="form">
+        <div class="col-lg-7 form-outline mb-2 text-center">
+            <label class="form-label" for="form0"></label>
+            <img id="prevImg" width="200px" src="../Fotos_pagina/photo-camera.png" />
+            <p class="mt-1">La imagen debe de tener una altura y ancho iguales. Ej. 160x160</p>
+            <input type="file" name="file" id="form0" onchange="encodeImageFileAsURL(this)" class="form-control mt-2" />
+        </div>
+        <div class="col-lg-7 form-outline mb-2">
+            <label class="form-label" for="form1">Nombre del producto</label>
+            <input type="text" name="name" id="form1" class="form-control" />
+        </div>
+        <div class="col-lg-7 form-outline mb-2">
+            <label class="form-label" for="form2">Precio</label>
+            <input type="number" step="0.01" name="price" id="form2" class="form-control" />
+        </div>
+        <div class="form-outline mb-4 col-lg-7">
+            <label class="form-label" for="form3">Descripción</label>
+            <input type="text" name="description" id="form3" class="form-control" />
+        </div>
+        <div class="form-outline mb-4 col-lg-7">
+            <label class="form-label" for="form4">Productos disponibles</label>
+            <input type="number" step="0.01" name="stock" id="form4" class="form-control" />
+        </div>
+        <div class="form-outline mb-4 col-lg-7" id="buttons">
+            <button type="submit" class="mx-2" id="btnProduct">Agregar producto</button>
+            <button type="button" class="mx-2" id="btnProductCancel">Cancelar</button>
+        </div>
+    </form>
+  </div>
 
-    <footer class="text-center text-white" style="background-color:black;">
-        <!-- Grid container -->
-        <div class="container">
-            <!-- Section: Social media -->
-            <section class="mb-4">
-                <span>Síguenos en redes</span>
-          <!-- Whatsapp -->
-          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" target="_blank" title="Mándame un mensaje" role="button" data-mdb-ripple-color="dark"
-            style="padding: 0;"><img src="../Fotos_pagina/Whats.png" width="40px" style="color: white;" alt=""></i></a>
-  
-          <!-- Instagram -->
-          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/natalia_omakeup/" target="_blank" title="Sígueme en Instagram" role="button" data-mdb-ripple-color="dark"
-            style="padding: 0;"><img src="../Fotos_pagina/IG.png" alt="" width="40px" height="40px"></i></a>
-          <br>
+<footer class="text-center text-white" style="background-color:black;">
+    <!-- Grid container -->
+  <div class="container">
+        <!-- Section: Social media -->
+    <section class="mb-4">
+      <span>Síguenos en redes</span>
+      <!-- Whatsapp -->
+      <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" target="_blank" title="Mándame un mensaje" role="button" data-mdb-ripple-color="dark"
+        style="padding: 0;"><img src="../Fotos_pagina/Whats.png" width="40px" style="color: white;" alt=""></i></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/natalia_omakeup/" target="_blank" title="Sígueme en Instagram" role="button" data-mdb-ripple-color="dark"
+        style="padding: 0;"><img src="../Fotos_pagina/IG.png" alt="" width="40px" height="40px"></i></a>
+      <br>
       <br>
       <span>Métodos de pago</span>
       <a
@@ -115,7 +115,7 @@
         style="padding: 0;"
         ><img src="../Fotos_pagina/tarjetas1.png" alt="" width="200px"></i
       ></a>
-    
+  
     </section>
   </div>
   <div class="text-center text-dark pb-2" style="background-color: rgba(0, 0, 0, 0.2);">
