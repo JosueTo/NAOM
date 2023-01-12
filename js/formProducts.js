@@ -14,6 +14,7 @@ let alertName = document.getElementById("alertProductName");
 let alertPrice = document.getElementById("alertPrice");
 let alertDescription = document.getElementById("alertDescription");
 let alertStock = document.getElementById("alertAvailable");
+let alertImg = document.getElementById("alertFile");
 
 function encodeImageFileAsURL(element) {
   let file = element.files[0];
@@ -71,6 +72,13 @@ form.addEventListener("submit", (e) => {
     description.style.border = "solid green 1px";
   }
 
+  if (image == undefined){
+    valido = false;
+    alertImg.style.display = "block";
+  }else{
+    alertImg.style.display = "none";
+  }
+
   if (parseInt(product.stock) < 0 || isNaN(parseInt(product.stock)) )
   {
     valido = false;
@@ -118,6 +126,7 @@ btnProductCancel.addEventListener("click", (e) => {
   price.style.border = "";
   description.style.border = "";
   stock.style.border = "";
+  alertImg.style.display = "none";
 });
 
 
