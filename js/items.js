@@ -7,12 +7,12 @@ export function addItem(product) {
             <div class="hearts-inner" style="width:100%;"></div>
         </div>
         <div class="card-title">
-        <p class="card-title">${product.name.slice(0,53)}...</p>
+        <p class="card-title"><font color="#1C315E">${product.name.slice(0,53)}...</font></p>
         </div>
 
         <div class="card-price">$500</div>
     </div>
-    <a href="#" class="btn btn-light addCartProd mt-1 mb-2 position-relative bottom-0" type="submit" style="background-color: #EFCFCF;"><strong>Agregar al carrito</strong></a>
+    <a href="#" class="btn btn-light addCartProd mt-1 mb-2 position-relative bottom-0" type="submit" style="background-color: #EFCFCF;"><strong><font color="#1C315E">Agregar al carrito</font></a>
     </div>
     `;
 }
@@ -28,12 +28,12 @@ export function addItems(product) {
             <div class="hearts-inner" style="width:100%;"></div>
         </div>
         <div class="card-title text-center">
-        <p class="card-text mb-3">${product.name}</p>
+        <p class="card-text mb-3"><font color="#1C315E">${product.name}</font></p>
         </div>
 
         <div class="card-price">$500</div>
     </div>
-    <a href="#" class="btn btn-light addCartProd mt-1 mb-2 position-relative bottom-0" type="submit" style="background-color: #EFCFCF;"><strong>Agregar al carrito</strong></a>
+    <a href="#" class="btn btn-light addCartProd mt-1 mb-2 position-relative bottom-0" type="submit" style="background-color: #EFCFCF;"><strong><font color="#1C315E">Agregar al carrito</font></strong></a>
     </div>
     `;
 }
