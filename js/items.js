@@ -12,7 +12,7 @@ export function addItem(product) {
 
         <div class="card-price">$500</div>
     </div>
-    <a href="#" class="btn btn-light addCartProd mt-1 mb-2 position-relative bottom-0" type="submit" style="background-color: #EFCFCF;"><strong><font color="#1C315E">Agregar al carrito</font></a>
+    <a href="#" class="addCartProd mt-1 mb-2 position-relative bottom-0" type="submit"><strong>Agregar al carrito</a>
     </div>
     `;
 }
@@ -33,7 +33,7 @@ export function addItems(product) {
 
         <div class="card-price">$500</div>
     </div>
-    <a href="#" class="btn btn-light addCartProd mt-1 mb-2 position-relative bottom-0" type="submit" style="background-color: #EFCFCF;"><strong><font color="#1C315E">Agregar al carrito</font></strong></a>
+    <a href="#" class="addCartProd mt-1 mb-2 position-relative bottom-0" type="submit">Agregar al carrito</strong></a>
     </div>
     `;
 }

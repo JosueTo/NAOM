@@ -82,3 +82,23 @@ body {
   .card-text{
     height: 80px;
   }
+
+  .addCartProd{
+    background-color: #EFCFCF;
+    color: #1C315E;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    bottom: 0;
+    padding: 8px 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5%;
+  }
+  
+  .addCartProd:hover {
+    color: #1C315E;
+    background-color: #fff;
+    border: 2px solid #EFCFCF;
+    padding: 6px 14px;
+  }
