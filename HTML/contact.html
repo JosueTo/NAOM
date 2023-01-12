@@ -72,7 +72,11 @@
     </div>
     
     <!-- FORMULARIO DE CONTACTO -->
+
     <div id="formContact" class="col-lg-5 col-sm-12">
+      <div class="alert alert-success mt-2" id="alertSuccess" style="display: none;" role="alert">
+        Su mensaje se ha enviado correctamente.
+      </div>
       <div class="box">
         <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
         <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Juan Pérez">
@@ -92,7 +96,7 @@
         <label for="exampleFormControlTextarea1" class="form-label">Escribe tu mensaje:</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
           placeholder="Escribe tu mensaje"></textarea>
-          <div class="alertRegistro" id="alertMessage" style="display: none;">El nombre no es válido</div>
+          <div class="alertRegistro" id="alertMessage" style="display: none;">El mensaje no es válido</div>
         <div class="pt-2 text-center">
           <button type="submit" id="btnContactoEnviar">Enviar</button>
         </div>

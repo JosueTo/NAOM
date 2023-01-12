@@ -23,11 +23,13 @@ let alertName = document.getElementById("alertName");
 let alertEmail = document.getElementById("alertEmail");
 let alertTel = document.getElementById("alertTel");
 let alertMessage = document.getElementById("alertMessage");
+let alertSuccess = document.getElementById("alertSuccess");
 
 btnContactoEnviar.addEventListener("click", function(event) 
 { 
     event.preventDefault();
     let validos=0;
+    alertSuccess.style.display = "none";
 
     
     // let alertError = document.getElementById("alertError");
@@ -92,6 +94,7 @@ if ((idTimeout!=undefined) && (idTimeout!=null))
   }
 
   if (validos == 4){
+    alertSuccess.style.display = "block";
     Email.send({
       SecureToken : "0d441985-cdef-4941-9931-d30a7ed8bde4",
       To : correos,
@@ -105,9 +108,7 @@ if ((idTimeout!=undefined) && (idTimeout!=null))
               <br>
               ${emailFrom.value}<br> 
               ${cellPhone.value}`
-  }).then(
-    message => alert("Su mensaje fue enviado exitosamente. Pronto nos contactáremos.")
-  );
+  });
     idTimeout =  setTimeout(function()
     {
       nameFrom.style.border="";
