@@ -19,14 +19,16 @@ export function addItem(product) {
 
 export function addItems(product) {
     return `
-    <div class="card col-xl-3 col-lg-4 col-sm-9 col-10 my-2 mx-1">
+    <div class="card col-xl-2 col-lg-3 col-sm-5 col-10  my-2 mx-2">
+    <div class="text-center">
     <img src="${product.file}" "class="card-img-top" alt="image">
+    </div>
     <div class="card-body"><br>
     <div class="hearts-outer">
             <div class="hearts-inner" style="width:100%;"></div>
         </div>
-        <div class="card-title">
-        <p class="card-title">${product.name.slice(0,53)}...</p>
+        <div class="card-title text-center">
+        <p class="card-text mb-3">${product.name}</p>
         </div>
 
         <div class="card-price">$500</div>
