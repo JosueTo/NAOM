@@ -162,3 +162,9 @@ h1{
   display: flex;
   justify-content: space-around;
 }
+
+.carousel-caption {
+  background-color: rgba(22, 22, 26, 0.18);
+  height: 200px;
+  padding: 2rem 2rem;
+}
