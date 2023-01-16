@@ -69,18 +69,18 @@
     <h1 class="mt-5">¡Bienvenido!</h1>
     <p>Inicia sesión para ingresar a tu cuenta</p>
     <form>
-      <div class="row justify-content-around ">
+
+      <div class="row justify-content-around mt-5" id="Cuenta">
         <div class="col-lg-4 col-10 form-input"><label><strong>Correo:</strong></label>
-          <input type="email" class="form-control" placeholder="nombre@ejemplo.com" id="email">
+          <input type="text" class="form-control" placeholder="nombre@ejemplo.com" id="email">
           <div class="alertLogIn" id="alertCorreo" style="display: none;">El correo electrónico no es válido</div>
         </div>
-
-      <div class="row justify-content-around">
         <div class="col-lg-4 col-10 form-input"><label><strong>Contraseña:</strong></label>
-          <input type="password" class="form-control" id="password" placeholder="Ingresar contraseña">
-          <div class="alertLogIn" id="alertErrorPassword" style="display: none;">La contraseña no es válida
-          </div>
-          <p class="mt-4">¿Olvidaste tu contraseña?</p>
+          <input type="password" class="form-control" placeholder="Ingresar contraseña" id="password">
+          <div class="alertLogIn" id="alertErrorPassword" style="display: none;">La contraseña no es válida</div>
+        </div>
+
+        <!--<p class="mt-4">¿Olvidaste tu contraseña?</p>-->
         </div>
       <div class="row justify-content-around">
         <div class="col-lg-4 col-6 text-center my-5">

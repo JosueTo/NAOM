@@ -34,14 +34,14 @@ main .form-control {
     color: #1C315E;
     border-radius: 5%;
     border: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 5rem;
     font-weight: bold;
 }
 
 .btnLogIn:hover {
     background-color: white;
     border: 2px solid #EFCFCF;
-    padding: 0.4rem 0.9rem;
+    padding: 0.4rem 5rem;
 }
 
 .row > * {
