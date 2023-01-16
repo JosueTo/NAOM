@@ -1,43 +1,52 @@
 let idTimeOut;
 let password = document.getElementById("password");
 let btnLogIn=document.getElementById("btnLogIn");
-let emailConfirmar = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+let email = document.getElementById("email");
+// let emailConfirmar = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 let alertErrorPassword = document.getElementById("alertErrorPassword");
 let alertCorreo = document.getElementById("alertCorreo");
 
-let email=document.getElementById("email");
+
 btnLogIn.addEventListener("click",function(event){
     event.preventDefault();
     let validos=0;
-
-    //---------Email---------
-
-    if (email.value.match(emailConfirmar)==null) {
-        alertCorreo.style.display="block";
-        email.style.border = "solid red 1px";
-      }
-      else {
-        email.style.border = "solid green 1px"
-        alertCorreo.style.display = "none";
-        validos++;
-      }
-    //---------------Contraseña
-
-    if (password.value.length < 6) {
-        alertErrorPassword.style.display="block";
-        password.style.border = "solid red 1px";
-      } else {
-        alertErrorPassword.style.display = "none";
-        password.style.border = "solid green 1px";
-        validos++;
-      }
 
     //-----------------TimeOut--------
     if ((idTimeOut!=undefined) && (idTimeOut!=null)) {
     clearTimeout(idTimeout);
   }
 
-});
+  let isLogged = {"nombre":`${getNameFromEmail(email.value)}`,
+                  "email":`${email.value}`
+                }
+  
+  //---------------- Validación Usuario-------
+  if (validateUserLoggedIn(email.value, password.value)) {
+    localStorage.setItem("isLogged", JSON.stringify(isLogged));
+  }
+}
+)
+
+function validateUserLoggedIn(email, password) {
+      let registroList = JSON.parse(localStorage.getItem("registro"));
+      
+      for (const user in registroList) {
+        if (registroList[user].email === email && registroList[user].password === password) {
+          return true;
+        }
+      }
+      return false;
+  }
+
+function getNameFromEmail(email) {
+  let registroList = JSON.parse(localStorage.getItem("registro"));
+  for (const user in registroList) {
+    if (email === registroList[user].email) return registroList[user].nombre;
+  }
+
+  return "";
+}
+;
 
 

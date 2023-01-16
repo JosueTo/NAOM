@@ -102,7 +102,7 @@ if ((idTimeOut!=undefined) && (idTimeOut!=null)) {
   "apellido":`${apellido.value}`,
   "email":`${email.value}`,
   "telefono":`${tel.value}`,
-  "contraseña":`${password.value}`}
+  "password":`${password.value}`}
 
   if(validos==6){
     if(localStorage.getItem("registro")){

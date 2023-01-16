@@ -63,3 +63,7 @@ main .form-input{
     font-weight: bold;
     position: absolute;
 }
+
+p > a {
+    text-decoration: none;
+}
