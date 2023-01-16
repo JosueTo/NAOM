@@ -24,6 +24,11 @@ btnLogIn.addEventListener("click",function(event){
   //---------------- Validación Usuario-------
   if (validateUserLoggedIn(email.value, password.value)) {
     localStorage.setItem("isLogged", JSON.stringify(isLogged));
+    window.location = '/';
+  }else{
+    alertErrorLogin.style.display="block";
+    password.style.border = "solid red 1px";
+    email.style.border = "solid red 1px";
   }
 }
 )
@@ -44,7 +49,6 @@ function getNameFromEmail(email) {
   for (const user in registroList) {
     if (email === registroList[user].email) return registroList[user].nombre;
   }
-
   return "";
 }
 ;
