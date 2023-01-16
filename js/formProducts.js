@@ -128,5 +128,3 @@ btnProductCancel.addEventListener("click", (e) => {
   stock.style.border = "";
   alertImg.style.display = "none";
 });
-
-

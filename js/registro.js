@@ -127,6 +127,4 @@ if(tel.value.length == 2){
 }
 // do something
 });
-
-
     
