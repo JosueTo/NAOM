@@ -32,6 +32,7 @@ btnLogIn.addEventListener("click", function (event) {
       window.location = '/';
     }, 3000);
   } else {
+    alertErrorLogin.style.display="block";
     password.style.border = "solid red 1px";
     email.style.border = "solid red 1px";
   }
