@@ -18,6 +18,8 @@ let nombre=document.getElementById("nombre");
 let apellido=document.getElementById("apellido");
 let email=document.getElementById("email");
 let tel=document.getElementById("tel");
+let ModalRegistro=document.getElementById("ModalRegistro");
+
 btnRegistro.addEventListener("click",function(event){
     event.preventDefault();
     let validos=0;
@@ -79,9 +81,6 @@ else {
     validos++;
   }
 
-
-
-
 //---------Email---------
 if (email.value.match(emailConfirmar)==null) {
   alertCorreo.style.display="block";
@@ -105,18 +104,24 @@ if ((idTimeOut!=undefined) && (idTimeOut!=null)) {
   "password":`${password.value}`}
 
   if(validos==6){
+    
     if(localStorage.getItem("registro")){
       let registroList = JSON.parse(localStorage.getItem("registro"));
       registroList.push(registro);
       localStorage.setItem("registro", JSON.stringify(registroList));
-      window.location = '/';
+      ModalRegistro.style.display="block";
+      
     }else{
       let registroList = [registro];
       localStorage.setItem("registro", JSON.stringify(registroList));
-      window.location = '/';
+      ModalRegistro.style.display="block";
     }
+     setTimeout(function()
+  {
+    window.location = '/';
+  }, 3000);
   }
-
+ 
 });
 
 tel.addEventListener("keypress", (event) => {
@@ -127,4 +132,5 @@ if(tel.value.length == 2){
 }
 // do something
 });
+
     
