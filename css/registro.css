@@ -44,11 +44,6 @@ main .form-control {
     padding: 0.4rem 0.9rem;
 }
 
-.row > * {
-    padding-left: 0;
-    padding-right: 0;
-}
-
 
 main .form-input{
     margin-bottom: 30px;

@@ -44,12 +44,6 @@ main .form-control {
     padding: 0.4rem 1.5rem;
 }
 
-.row > * {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-
 main .form-input{
     margin-bottom: 30px;
     margin-top: 30px;
@@ -65,9 +59,9 @@ main .form-input{
 }
 
 
-p > a {
+/* p > a {
     text-decoration: none;
-}
+} */
 @media(min-width:768px){
     .btnLogIn {
         padding: 0.5rem 5rem;

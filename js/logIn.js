@@ -2,7 +2,7 @@ let idTimeOut;
 let password = document.getElementById("password");
 let btnLogIn = document.getElementById("btnLogIn");
 let email = document.getElementById("email");
-let toggleUserView = document.getElementsByClassName("toggleUserView");
+let ModalRegistro=document.getElementById("ModalRegistro");
 // let emailConfirmar = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 let alertErrorPassword = document.getElementById("alertErrorPassword");
@@ -26,7 +26,11 @@ btnLogIn.addEventListener("click", function (event) {
   //---------------- Validación Usuario-------
   if (validateUserLoggedIn(email.value, password.value)) {
     localStorage.setItem("isLogged", JSON.stringify(isLogged));
-    window.location = '/';
+    ModalRegistro.style.display="block";
+    setTimeout(function()
+    {
+      window.location = '/';
+    }, 3000);
   } else {
     password.style.border = "solid red 1px";
     email.style.border = "solid red 1px";

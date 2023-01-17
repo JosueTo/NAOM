@@ -9,7 +9,7 @@ body .form-control {
     border: 1px black solid;
 }
 
-#btnProduct{
+#btnProduct, #btnConfirm{
     background-color: #EFCFCF;
     color: #1C315E;
     border-radius: 5%;
@@ -24,7 +24,7 @@ body .form-control {
     padding: 6px 14px;
 }
 
-#btnProductCancel{
+#btnProductCancel, #btnCerrar{
     background-color: black;
     color: #ffffff;
     border-radius: 5%;

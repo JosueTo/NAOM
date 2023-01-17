@@ -33,7 +33,7 @@ nav{
 
 @media(min-width:320px){
     .iconNav{
-        padding: 0px 15px 0px 15px;
+        margin: 0px 10px 0px 10px;
     }
     .navbar-brand img{
         width: 100px;
@@ -43,7 +43,7 @@ nav{
 
 @media(min-width:425px){
     .iconNav{
-        padding: 0px 30px 0px 30px;
+        padding: 0px 25px 0px 25px;
     }
     .navbar-brand img{
         width: 100px;
@@ -107,6 +107,7 @@ nav{
         margin-left: 50px;
     }
 }
+
 
 
 

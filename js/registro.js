@@ -103,14 +103,18 @@ if ((idTimeOut!=undefined) && (idTimeOut!=null)) {
   "telefono":`${tel.value}`,
   "password":`${password.value}`}
 
+  let isLogged = {
+    "nombre": `${nombre.value}`,
+    "email": `${email.value}`
+  }
+
   if(validos==6){
-    
+    localStorage.setItem("isLogged", JSON.stringify(isLogged));
     if(localStorage.getItem("registro")){
       let registroList = JSON.parse(localStorage.getItem("registro"));
       registroList.push(registro);
       localStorage.setItem("registro", JSON.stringify(registroList));
       ModalRegistro.style.display="block";
-      
     }else{
       let registroList = [registro];
       localStorage.setItem("registro", JSON.stringify(registroList));
