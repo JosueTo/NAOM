@@ -16,6 +16,11 @@ let alertDescription = document.getElementById("alertDescription");
 let alertStock = document.getElementById("alertAvailable");
 let alertImg = document.getElementById("alertFile");
 
+let exampleModal = document.getElementById("exampleModal");
+let btnConfirm = document.getElementById("btnConfirm");
+let btnCerrar = document.getElementById("btnCerrar");
+let CloseModal = document.getElementById("CloseModal");
+
 function encodeImageFileAsURL(element) {
   let file = element.files[0];
   let reader = new FileReader();
@@ -31,7 +36,6 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   alertSuccess.innerHTML = "";
   alertSuccess.style.display="none";
-
 
   let valido = true;
 
@@ -90,25 +94,47 @@ form.addEventListener("submit", (e) => {
   }
 
   if(valido){
-    if(localStorage.getItem("product")){
-      let productList = JSON.parse(localStorage.getItem("product"));
-      productList.push(product);
-      localStorage.setItem("product", JSON.stringify(productList));
-      alertSuccess.style.display="block";
-      alertSuccess.innerHTML += "Se agregó el producto correctamente."
-      form.reset();
-      prevImg.src = "../Fotos_pagina/photo-camera.png";
-    }else{
-      let productList = [product];
-      localStorage.setItem("product",JSON.stringify(productList))
-      alertSuccess.style.display="block";
-      alertSuccess.innerHTML += "Se agregó el producto correctamente."
-      form.reset();
-      prevImg.src = "../Fotos_pagina/photo-camera.png";
-    }
-    
+    exampleModal.style.display="block";
   }
-})
+});
+
+btnConfirm.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  let product = {"name":`${name1.value}`,
+  "price":`${price.value}`,
+  "description":`${description.value}`,
+  "stock":`${stock.value}`,
+  "file":`${image}`}
+
+  if(localStorage.getItem("product")){
+    let productList = JSON.parse(localStorage.getItem("product"));
+    productList.push(product);
+    localStorage.setItem("product", JSON.stringify(productList));
+    alertSuccess.style.display="block";
+    alertSuccess.innerHTML += "Se agregó el producto correctamente."
+    form.reset();
+    prevImg.src = "../Fotos_pagina/photo-camera.png";
+  }else{
+    let productList = [product];
+    localStorage.setItem("product",JSON.stringify(productList))
+    alertSuccess.style.display="block";
+    alertSuccess.innerHTML += "Se agregó el producto correctamente."
+    form.reset();
+    prevImg.src = "../Fotos_pagina/photo-camera.png";
+  }
+  exampleModal.style.display="none";
+});
+
+btnCerrar.addEventListener("click", function() {
+      
+  exampleModal.style.display="none";
+});
+
+CloseModal.addEventListener("click", function() {
+      
+  exampleModal.style.display="none";
+});
 
 btnProductCancel.addEventListener("click", (e) => {
   e.preventDefault();
