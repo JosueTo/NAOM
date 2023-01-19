@@ -185,4 +185,10 @@ h1{
   background-color: rgba(22, 22, 26, 0.18);
   height: 200px;
   padding: 2rem 2rem;
+
+}
+
+.carousel-caption > p {
+  font-size: 2rem;
+ 
 }
