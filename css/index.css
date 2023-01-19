@@ -31,6 +31,24 @@ h1{
   transform: translateY(-50%);
 }
 
+.carousel-inner {
+  position: relative;
+}
+
+.credits {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.credits > a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .products-carousel {
   display: flex;
   max-width: 100%;
