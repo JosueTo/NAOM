@@ -42,8 +42,6 @@
  
  - [`Ivan Campos Ceron`](https://github.com/IvanCC11)
  
- - [`Eduardo Cruz Estrada`](https://github.com/edwardholmes9)
- 
  - [`Maria Gonzalez Barreda`](https://github.com/Maria-Glz)
  
  - [`Johanna Villegas Pérez`](https://github.com/bestiadesign)
