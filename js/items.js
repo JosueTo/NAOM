@@ -10,7 +10,7 @@ export function addItem(product) {
         <p class="card-title"><font color="#1C315E">${product.name.slice(0,53)}...</font></p>
         </div>
 
-        <div class="card-price">$500</div>
+        <div class="card-price">$${product.price}</div>
     </div>
     <a href="#" class="addCartProd mt-1 mb-2 position-relative bottom-0" type="submit"><strong>Agregar al carrito</a>
     </div>
@@ -31,7 +31,7 @@ export function addItems(product) {
         <p class="card-text mb-3"><font color="#1C315E">${product.name}</font></p>
         </div>
 
-        <div class="card-price">$500</div>
+        <div class="card-price">$${product.price}</div>
     </div>
     <a href="#" class="addCartProd mt-1 mb-2 position-relative bottom-0" type="submit">Agregar al carrito</strong></a>
     </div>

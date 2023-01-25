@@ -14,7 +14,6 @@ const keyword = params.get("busqueda");
 
 //Va a funcionar con la call al API
 window.onload = function() {
-    resultHeader.innerHTML = `Resultado de ${keyword}`;
-    
+    resultHeader.innerHTML = `Resultado de ${keyword}`; 
     // searchResult(keyword).then(data => resultItems(data));
 }
