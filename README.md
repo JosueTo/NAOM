@@ -5,7 +5,7 @@
 
 ## Diseño en Figma
 
- [https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=0%3A1&t=mrk56f70lH9n8cuo-1](https://www.figma.com/file/pv9lja8yzYyeAnR8PsQG17/Maqueta-NAOM.?node-id=0%3A1&t=mrk56f70lH9n8cuo-1)
+ https://www.figma.com/file/I0tg7mpwyBdXIat7tk2Dr5/--Maqueta-NAOM.?node-id=0%3A1&t=s8EEtzpd8clJ78LK-1 
 
 ## Se utilizó
 
