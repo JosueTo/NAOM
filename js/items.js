@@ -42,3 +42,9 @@ export function getAllProducts() {
    return fetch('../js/products.json')
         .then(response => response.json()).then(data => data.products);
 }
+
+
+//Se va a implementar cuando el API este funcional.
+// export async function searchResult(keyword){
+//     return fetch("APIURL"+keyword);
+// }

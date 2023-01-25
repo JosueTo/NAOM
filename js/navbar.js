@@ -1,4 +1,7 @@
 let toggleUserView = document.getElementsByClassName("toggleUserView");
+let searchButton = document.getElementById("searchButton");
+let searchBar = document.getElementById("searchBar");
+
 window.addEventListener("load", () => {
   if(localStorage.getItem("isLogged")){
     toggleUserView[0].innerHTML = "Hola "+JSON.parse(localStorage.getItem("isLogged")).nombre;
@@ -11,3 +14,15 @@ window.addEventListener("load", () => {
 toggleUserView[1].addEventListener("click", () => {
   localStorage.removeItem("isLogged");
 })
+
+searchButton.addEventListener("click", (e) =>{
+
+  e.preventDefault();
+  if(searchBar.value.length > 2){
+    let url = `../HTML/searchResult.html?busqueda=${searchBar.value}`;
+    window.location.href = url;
+  }else{
+    searchBar.style.border = "1px solid red";
+  }
+})
+

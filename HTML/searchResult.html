@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NAOM-Nosotros</title>
+  <title>NAOM</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/navbar.css">
-  <link rel="stylesheet" href="../css/contact.css">
-
+  <script src="https://kit.fontawesome.com/1f6a29c5b3.js" defer crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/registro.css">
 </head>
 
 <body>
@@ -67,63 +67,13 @@
     </div>
   </nav>
 
+  <h1 class="mt-4" id="resultHeader"></h1>
 
-  <!-- MAIN PAGE -->
-  <main class="container">
-    <div class="row justify-content-around">
-      <header class="main-headers">
-        <h1 class="text-center"> <b> Contáctanos </b> </h1>
-      </header>
-      <div id="banner">
-      </div>
-      <!-- INFO DE CONTACTO -->
-      <div class="text-center col-lg-5 col-sm-12 pt-2" id="contactUs">
-        <br>
-        <p style="font-size: 25px;"><b> Horarios de operación</b></p>
-        <br>
-        <p>Lunes - Viernes 10 AM - 5 PM GMT+6
-          <br>Celular: +52 (999) 165-9987
-          <br>Email: contacto.naom@gmail.com
-        </p>
-      </div>
-
-      <!-- FORMULARIO DE CONTACTO -->
-
-      <div id="formContact" class="col-lg-5 col-sm-12">
-        <div class="alert alert-success mt-2" id="alertSuccess" style="display: none;" role="alert">
-          Su mensaje se ha enviado correctamente.
-        </div>
-        <div class="box">
-          <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
-          <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Juan Pérez">
-          <div class="alertRegistro" id="alertName" style="display: none;">El nombre no es válido</div>
-        </div>
-        <div class="box">
-          <label for="exampleFormControlInput1" class="form-label">Correo:</label>
-          <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="nombre@ejemplo.com">
-          <div class="alertRegistro" id="alertEmail" style="display: none;">El correo electrónico no es válido</div>
-        </div>
-        <div class="box">
-          <label for="exampleFormControlInput1" class="form-label">Teléfono:</label>
-          <input type="tel" maxlength="12" class="form-control" id="exampleFormControlInput3"
-            placeholder="Formato XX-XXXX-XXXX">
-          <div class="alertRegistro" id="alertTel" style="display: none;">Ingresa un número válido</div>
-        </div>
-        <div class="box">
-          <label for="exampleFormControlTextarea1" class="form-label">Escribe tu mensaje:</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-            placeholder="Escribe tu mensaje"></textarea>
-          <div class="alertRegistro" id="alertMessage" style="display: none;">El mensaje no es válido</div>
-          <div class="pt-2 text-center">
-            <button type="submit" id="btnContactoEnviar">Enviar</button>
-          </div>
-        </div>
-      </div>
+  <main class="container-fluid" id="mainContainer">
+    <div id="card-wrapper" class="row mt-5 ms-5">
     </div>
   </main>
 
-
-  <!-- FOOTER -->
   <footer class="text-center text-white" style="background-color:black;">
     <!-- Grid container -->
     <div class="container">
@@ -151,9 +101,7 @@
     </div>
   </footer>
   <script src="../js/navbar.js"></script>
-  <script src="../js/contacto.js"></script>
-  <script src="https://smtpjs.com/v3/smtp.js">
-  </script>
+  <script type="module" src="../js/search.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
