@@ -1,16 +1,15 @@
 body {
   min-height: 100vh;
-
 }
 
-h1{
+h1 {
   font-family: ExoBold;
 }
 
 .cards-wrapper {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
+}
 .card img {
   max-width: 100%;
   max-height: 100%;
@@ -51,8 +50,10 @@ h1{
 
 .products-carousel {
   display: flex;
+  flex-direction: column;
   max-width: 100%;
   justify-content: center;
+  align-items: center;
   margin-top: 2rem;
 }
 
@@ -89,7 +90,8 @@ h1{
   padding: 1rem;
 }
 
-.card-title, .card-text {
+.card-title,
+.card-text {
   margin-bottom: 0.5rem;
 }
 
@@ -142,12 +144,12 @@ h1{
   font-family: "Font Awesome 5 Free";
   font-size: 24px;
   font-weight: 900;
-  color: #6C4AB6;
+  color: #6c4ab6;
 }
 
-.addCartProd{
-  background-color: #EFCFCF;
-  color: #1C315E;
+.addCartProd {
+  background-color: #efcfcf;
+  color: #1c315e;
   position: relative;
   display: flex;
   justify-content: space-around;
@@ -159,23 +161,23 @@ h1{
 }
 
 .addCartProd:hover {
-  color: #1C315E;
+  color: #1c315e;
   background-color: #fff;
-  border: 2px solid #EFCFCF;
+  border: 2px solid #efcfcf;
   padding: 6px 14px;
 }
 
-.card-title{
-  color: #1C315E;
+.card-title {
+  color: #1c315e;
   min-height: 108px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.card-price{
+.card-price {
   font-family: ExoBold;
-  color: #6C4AB6;
+  color: #6c4ab6;
   text-align: center;
   display: flex;
   justify-content: space-around;
@@ -185,10 +187,8 @@ h1{
   background-color: rgba(22, 22, 26, 0.18);
   height: 200px;
   padding: 2rem 2rem;
-
 }
 
 .carousel-caption > p {
   font-size: 2rem;
- 
 }

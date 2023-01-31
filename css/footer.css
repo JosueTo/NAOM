@@ -1,9 +1,9 @@
-footer{
-    color: #FFF;
+footer {
+  color: #fff;
 }
 
-@media(min-width:1024px){
-    footer{
-        font-size: 1.2em;
-    }
+@media (min-width: 1024px) {
+  footer {
+    font-size: 1.2em;
+  }
 }
