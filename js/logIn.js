@@ -1,3 +1,4 @@
+import { userLogin } from "./auth.js";
 let idTimeOut;
 let password = document.getElementById("password");
 let btnLogIn = document.getElementById("btnLogIn");
@@ -18,41 +19,25 @@ btnLogIn.addEventListener("click", function (event) {
     clearTimeout(idTimeout);
   }
 
-  let isLogged = {
-    "nombre": `${getNameFromEmail(email.value)}`,
-    "email": `${email.value}`
-  }
+  
 
   //---------------- Validación Usuario-------
-  if (validateUserLoggedIn(email.value, password.value)) {
-    localStorage.setItem("isLogged", JSON.stringify(isLogged));
-    ModalRegistro.style.display="block";
-    setTimeout(function()
-    {
-      window.location = '/';
-    }, 3000);
-  } else {
-    alertErrorLogin.style.display="block";
-    password.style.border = "solid red 1px";
-    email.style.border = "solid red 1px";
+  let login = {
+    "correo": `${email.value}`,
+    "contrasena": `${password.value}`
   }
-})
 
-function validateUserLoggedIn(email, password) {
-  let registroList = JSON.parse(localStorage.getItem("registro"));
-
-  for (const user in registroList) {
-    if (registroList[user].email === email && registroList[user].password === password) {
-      return true;
+  userLogin(login).then(response => {
+    if (response.ok) {
+      response.json().then(data => localStorage.setItem("token", JSON.stringify(data.accessToken)));
+      ModalRegistro.style.display = "block";
+      setTimeout(function () {
+        window.location = '../index.html';
+      }, 3000);
+    }else {
+      alertErrorLogin.style.display="block";
+      password.style.border = "solid red 1px";
+      email.style.border = "solid red 1px";
     }
-  }
-  return false;
-}
-
-function getNameFromEmail(email) {
-  let registroList = JSON.parse(localStorage.getItem("registro"));
-  for (const user in registroList) {
-    if (email === registroList[user].email) return registroList[user].nombre;
-  }
-  return "";
-}
+  });
+});

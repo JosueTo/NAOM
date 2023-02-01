@@ -1,4 +1,4 @@
-import { addItems, getAllProducts } from "./items.js";
+import { addItems, getProducts } from "./items.js";
 
 const cardWrapper = document.getElementById("card-wrapper");
 let maxVal = document.getElementById("maxVal");
@@ -9,34 +9,11 @@ function maquillajeItems(product) {
   cardWrapper.innerHTML += addItems(product);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("working");
-  let btnAddCart = document.getElementsByClassName("addCartProd");
-  for (let i = 0; i < btnAddCart.length; i++) {
-    btnAddCart[i].addEventListener("click", () => {
-      if (localStorage.getItem("carrito")) {
-        let carritoList = JSON.parse(localStorage.getItem("carrito"));
-        carritoList.push(btnAddCart[i].id);
-        localStorage.setItem("carrito", JSON.stringify(carritoList));
-      } else {
-        let carritoList = [btnAddCart[i].id];
-        localStorage.setItem("carrito", JSON.stringify(carritoList));
-      }
-    });
-  }
+window.addEventListener("load", () => {
+  getProducts(1).then(response => response.json())
+  .then(products => products.forEach(product => maquillajeItems(product)))
 });
 
-window.addEventListener("load", () => {
-  getAllProducts().then((products) =>
-    products.forEach((product) => maquillajeItems(product))
-  );
-  if (localStorage.getItem("product")) {
-    let productList = JSON.parse(localStorage.getItem("product"));
-    productList.forEach((product) => {
-      maquillajeItems(product);
-    });
-  }
-});
 
 filtrarBtn.addEventListener("click", () => {
   cardWrapper.innerHTML = "";
@@ -69,3 +46,19 @@ filtrarBtn.addEventListener("click", () => {
       .forEach((product) => maquillajeItems(product));
   }
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   let btnAddCart = document.getElementsByClassName("addCartProd");
+//   for (let i = 0; i < btnAddCart.length; i++) {
+//     btnAddCart[i].addEventListener("submit", () => {
+//       if (localStorage.getItem("carrito")) {
+//         let carritoList = JSON.parse(localStorage.getItem("carrito"));
+//         carritoList.push(btnAddCart[i].id);
+//         localStorage.setItem("carrito", JSON.stringify(carritoList));
+//       } else {
+//         let carritoList = [btnAddCart[i].id];
+//         localStorage.setItem("carrito", JSON.stringify(carritoList));
+//       }
+//     });
+//   }
+// });

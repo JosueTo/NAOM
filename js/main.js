@@ -11,7 +11,9 @@ function novedadesItems(product) {
 
 
 window.addEventListener("load", () => {
-    getAllProducts().then(products => products.forEach(product => novedadesItems(product)));
+    getAllProducts().then(response => response.json()).then(products => {
+        console.log(products);
+        products.forEach(product => novedadesItems(product))});
 });
 
 

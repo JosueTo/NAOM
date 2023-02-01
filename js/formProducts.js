@@ -114,24 +114,7 @@ btnConfirm.addEventListener("click", (e) => {
   "stock":`${stock.value}`,
   "file":`${image}`}
 
-  if(localStorage.getItem("product")){
-    let productList = JSON.parse(localStorage.getItem("product"));
-    productList.push(product);
-    localStorage.setItem("product", JSON.stringify(productList));
-    alertSuccess.style.display="block";
-    alertSuccess.innerHTML += "Se agregó el producto correctamente."
-    form.reset();
-    prevImg.src = "../Fotos_pagina/photo-camera.png";
-    tableRowAdd(product);
-  }else{
-    let productList = [product];
-    localStorage.setItem("product",JSON.stringify(productList))
-    alertSuccess.style.display="block";
-    alertSuccess.innerHTML += "Se agregó el producto correctamente."
-    form.reset();
-    prevImg.src = "../Fotos_pagina/photo-camera.png";
-    tableRowAdd(product);
-  }
+  
   exampleModal.style.display="none";
 });
 
@@ -166,7 +149,7 @@ btnProductCancel.addEventListener("click", (e) => {
 
 
 window.addEventListener("load", () => {
-  getAllProducts().then(products => products.forEach(product => tableRowAdd(product)));
+  getAllProducts().then(response => response.json()).then(products => products.forEach(product => tableRowAdd(product)));
 
 })
 
