@@ -38,6 +38,17 @@ export function addItems(product) {
     `;
 }
 
+export function addTableRows(product) {
+    return `
+    <tr>
+    <td>${product.name}</td>
+    <td>${product.price}</td>
+    <td>${product.description}</td>
+    <td>10</td>
+    </tr>
+    `;
+}
+
 export function getAllProducts() {
    return fetch('../js/products.json')
         .then(response => response.json()).then(data => data.products);

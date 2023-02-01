@@ -1,3 +1,6 @@
+import { addTableRows, getAllProducts } from "./items.js";
+
+let tableRow = document.getElementById("tableRow");
 let form = document.getElementById("form");
 let img = document.getElementById("form0");
 let name1 = document.getElementById("form1");
@@ -30,6 +33,10 @@ function encodeImageFileAsURL(element) {
   }
   reader.readAsDataURL(file);
 }
+
+img.addEventListener("change", (e) => {
+  encodeImageFileAsURL(e.target);
+})
 
 
 form.addEventListener("submit", (e) => {
@@ -115,6 +122,7 @@ btnConfirm.addEventListener("click", (e) => {
     alertSuccess.innerHTML += "Se agregó el producto correctamente."
     form.reset();
     prevImg.src = "../Fotos_pagina/photo-camera.png";
+    tableRowAdd(product);
   }else{
     let productList = [product];
     localStorage.setItem("product",JSON.stringify(productList))
@@ -122,6 +130,7 @@ btnConfirm.addEventListener("click", (e) => {
     alertSuccess.innerHTML += "Se agregó el producto correctamente."
     form.reset();
     prevImg.src = "../Fotos_pagina/photo-camera.png";
+    tableRowAdd(product);
   }
   exampleModal.style.display="none";
 });
@@ -154,3 +163,13 @@ btnProductCancel.addEventListener("click", (e) => {
   stock.style.border = "";
   alertImg.style.display = "none";
 });
+
+
+window.addEventListener("load", () => {
+  getAllProducts().then(products => products.forEach(product => tableRowAdd(product)));
+
+})
+
+function tableRowAdd(product) {
+  tableRow.innerHTML += addTableRows(product);
+}
