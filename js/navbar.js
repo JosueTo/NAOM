@@ -4,8 +4,8 @@ let searchBar = document.getElementById("searchBar");
 
 window.addEventListener("load", () => {
   if(localStorage.getItem("isLogged")){
-    toggleUserView[0].innerHTML = "Hola "+JSON.parse(localStorage.getItem("isLogged")).nombre;
-    toggleUserView[0].href = "";
+    toggleUserView[0].innerHTML = "Mi cuenta";
+    toggleUserView[0].href = "../HTML/usuario.html";
     toggleUserView[1].innerHTML = "Cerrar sesión";
     toggleUserView[1].href = "../HTML/logIn.html";
   }
