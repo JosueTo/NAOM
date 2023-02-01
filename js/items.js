@@ -1,5 +1,5 @@
 export function addItem(product) {
-    return `
+  return `
     <div class="swiper-slide">
     <img src="${product.file}" "class="card-img-top" alt="image">
     <div class="card-body"><br>
@@ -7,7 +7,10 @@ export function addItem(product) {
             <div class="hearts-inner" style="width:100%;"></div>
         </div>
         <div class="card-title">
-        <p class="card-title"><font color="#1C315E">${product.name.slice(0,53)}...</font></p>
+        <p class="card-title"><font color="#1C315E">${product.name.slice(
+          0,
+          53
+        )}...</font></p>
         </div>
 
         <div class="card-price">$${product.price}</div>
@@ -18,8 +21,8 @@ export function addItem(product) {
 }
 
 export function addItems(product) {
-    return `
-    <div class="card col-xl-2 col-lg-3 col-sm-5 col-10  my-2 mx-2">
+  return `
+    <div class="card col-xl-2 col-lg-3 col-sm-5 col-10  my-2 mx-2" >
     <div class="text-center">
     <img src="${product.file}" "class="card-img-top" alt="image">
     </div>
@@ -33,13 +36,13 @@ export function addItems(product) {
 
         <div class="card-price">$${product.price}</div>
     </div>
-    <a href="#" class="addCartProd mt-1 mb-2 position-relative bottom-0" type="submit">Agregar al carrito</strong></a>
+    <a href="#" id="${product.id}" class="addCartProd mt-1 mb-2 position-relative bottom-0" type="submit">Agregar al carrito</strong></a>
     </div>
     `;
 }
 
 export function addTableRows(product) {
-    return `
+  return `
     <tr>
     <td>${product.name}</td>
     <td>${product.price}</td>
@@ -50,10 +53,10 @@ export function addTableRows(product) {
 }
 
 export function getAllProducts() {
-   return fetch('../js/products.json')
-        .then(response => response.json()).then(data => data.products);
+  return fetch("../js/products.json")
+    .then((response) => response.json())
+    .then((data) => data.products);
 }
-
 
 //Se va a implementar cuando el API este funcional.
 // export async function searchResult(keyword){
