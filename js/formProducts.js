@@ -3,7 +3,6 @@ import { addProduct, addTableRows, getAllProducts, deleteProduct, updateProduct 
 
 let tableRow = document.getElementById("tableRow");
 let form = document.getElementById("form");
-let img = document.getElementById("form0");
 let name1 = document.getElementById("form1");
 let price = document.getElementById("form2");
 let description = document.getElementById("form3");
@@ -12,7 +11,6 @@ let prevImg = document.getElementById("prevImg");
 let btnProductCancel = document.getElementById("btnProductCancel");
 let btnProduct = document.getElementById("btnProduct");
 let alertSuccess = document.getElementById("alertSuccess");
-let image;
 let valorCategoria = document.getElementById("selectorCategoria");
 let categoria;
 
@@ -28,26 +26,29 @@ let btnCerrar = document.getElementById("btnCerrar");
 let CloseModal = document.getElementById("CloseModal");
 let token = localStorage.getItem("token");
 let productos = await getAllProducts().then(response => response.json());
+let image;
 
-function encodeImageFileAsURL(element) {
-  let file = element.files[0];
-  let reader = new FileReader();
-  reader.onloadend = function() {
-    image = reader.result;
-    prevImg.src = reader.result;
+var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'domamliq5', 
+  uploadPreset: 'xvfhpubb'}, (error, result) => { 
+    if (!error && result && result.event === "success") { 
+      prevImg.src = result.info.url;
+    }
   }
-  reader.readAsDataURL(file);
-}
+);
 
-img.addEventListener("change", (e) => {
-  encodeImageFileAsURL(e.target);
-})
+document.getElementById("upload_widget").addEventListener("click", function(e){
+  e.preventDefault();
+  myWidget.open();
+});
 
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   alertSuccess.innerHTML = "";
   alertSuccess.style.display="none";
+
+  image = prevImg.src;
 
   let valido = true;
 
@@ -78,8 +79,9 @@ form.addEventListener("submit", (e) => {
       "precio":`${price.value}`,
       "descripcion":`${description.value}`,
       "stock":`${stock.value}`,
-      "foto":``,
+      "foto":`${prevImg.src}`,
       "rating": 10,
+      "foto":`${image}}`,
       "categorias": categoria}
 
   if (product.nombre.length < 3 || product.nombre.length > 20)
@@ -113,7 +115,7 @@ form.addEventListener("submit", (e) => {
     description.style.border = "solid green 1px";
   }
 
-  if (image == undefined){
+  if (prevImg == undefined){
     valido = false;
     alertImg.style.display = "block";
   }else{
@@ -165,7 +167,7 @@ btnConfirm.addEventListener("click", (e) => {
       "precio":`${price.value}`,
       "descripcion":`${description.value}`,
       "stock":`${stock.value}`,
-      "foto":``,
+      "foto":`${image}`,
       "rating": 10,
       "categorias": categoria}
 
@@ -219,7 +221,6 @@ window.addEventListener("load", () => {
       //AQUI VA EL FILTRO POR ID PARA SACAR LOS DATOS DEL OBJETO Y EL editProduct
     }
   }));
-
 })
 
 function tableRowAdd(product) {

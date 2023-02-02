@@ -5,14 +5,12 @@ let maxVal = document.getElementById("maxVal");
 let minVal = document.getElementById("minVal");
 const filtrarBtn = document.getElementById("filtrarBtn");
 const productos = await getProducts(1).then(response => response.json());
+productos.forEach(product => maquillajeItems(product));
 
 function maquillajeItems(product) {
   cardWrapper.innerHTML += addItems(product);
 }
 
-window.addEventListener("load", () => {
-  productos.forEach(product => maquillajeItems(product))
-});
 
 
 filtrarBtn.addEventListener("click", () => {

@@ -1,4 +1,4 @@
-import { userLogin } from "./auth.js";
+import { userLogin, userAdminLogin } from "./auth.js";
 let idTimeOut;
 let password = document.getElementById("password");
 let btnLogIn = document.getElementById("btnLogIn");
@@ -8,6 +8,7 @@ let ModalRegistro=document.getElementById("ModalRegistro");
 
 let alertErrorPassword = document.getElementById("alertErrorPassword");
 let alertCorreo = document.getElementById("alertCorreo");
+let btnAdmin = document.getElementById("adminLogin");
 
 
 btnLogIn.addEventListener("click", function (event) {
@@ -28,6 +29,38 @@ btnLogIn.addEventListener("click", function (event) {
   }
 
   userLogin(login).then(response => {
+    if (response.ok) {
+      response.json().then(data => localStorage.setItem("token", JSON.stringify(data.accessToken)));
+      ModalRegistro.style.display = "block";
+      setTimeout(function () {
+        window.location = '../index.html';
+      }, 3000);
+    }else {
+      alertErrorLogin.style.display="block";
+      password.style.border = "solid red 1px";
+      email.style.border = "solid red 1px";
+    }
+  });
+});
+
+btnAdmin.addEventListener("click", function (event) {
+  event.preventDefault();
+
+
+  //-----------------TimeOut--------
+  if ((idTimeOut != undefined) && (idTimeOut != null)) {
+    clearTimeout(idTimeout);
+  }
+
+  
+
+  //---------------- Validación Usuario-------
+  let login = {
+    "correo": `${email.value}`,
+    "contrasena": `${password.value}`
+  }
+
+  userAdminLogin(login).then(response => {
     if (response.ok) {
       response.json().then(data => localStorage.setItem("token", JSON.stringify(data.accessToken)));
       ModalRegistro.style.display = "block";

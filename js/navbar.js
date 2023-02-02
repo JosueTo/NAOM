@@ -13,7 +13,7 @@ toggleUserView[1].addEventListener("click", () => {
   localStorage.removeItem("token");
 })
 
-searchButton.addEventListener("click", (e) =>{
+searchButton.addEventListener("click", (e) => {
   e.preventDefault();
   if(searchBar.value.length > 2){
     let url = `../HTML/searchResult.html?busqueda=${searchBar.value}`;

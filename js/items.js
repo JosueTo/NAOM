@@ -1,7 +1,7 @@
 export function addItem(product) {
   return `
     <div class="swiper-slide">
-    <img src="../Fotos-productos/${product.foto}" "class="card-img-top" alt="image">
+    <img src="${product.foto}" "class="card-img-top" alt="image">
     <div class="card-body"><br>
     <div class="hearts-outer">
             <div class="hearts-inner" style="width:100%;"></div>
@@ -24,7 +24,7 @@ export function addItems(product) {
   return `
     <div class="card col-xl-2 col-lg-3 col-sm-5 col-10  my-2 mx-2" >
     <div class="text-center">
-    <img src="../Fotos-productos/${product.foto}" "class="card-img-top" alt="image">
+    <img src="${product.foto}" "class="card-img-top" alt="image">
     </div>
     <div class="card-body"><br>
     <div class="hearts-outer">

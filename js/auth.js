@@ -21,6 +21,17 @@ export async function userLogin(login){
     return response;
 }
 
+export async function userAdminLogin(login){
+  const response = await fetch('http://localhost:8080/api/auth/login/w3b0s', {
+    method: 'POST',
+    body: JSON.stringify(login),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  return response;
+}
+
 export async function getUser(token){
     const response = await fetch('http://localhost:8080/api/usuario', {
       method: 'GET',

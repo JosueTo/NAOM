@@ -2,19 +2,13 @@ import { addItem, getAllProducts } from "./items.js";
 
 const itemsContainer = document.getElementById("list-items");
 const productos = await getAllProducts().then(response => response.json());
+productos.forEach(product => novedadesItems(product));
 
 
 
 function novedadesItems(product) {
     itemsContainer.innerHTML += addItem(product);
 }
-
-
-
-window.addEventListener("load", () => {
-    productos.forEach(product => novedadesItems(product));
-});
-
 
 // Carousel
 let swiper = new Swiper(".mySwiper", {
