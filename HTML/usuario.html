@@ -67,35 +67,75 @@
     </div>
   </nav>
   
-  <!----Barra de opciones de cuenta---->
-  <main class="container-fluid text-center">
-    <header class="main-headers text-center">
-      <h1>Mi Cuenta</h1>
-      <h5>¡Bienvenido!</h5>
-    </header>
-    <div class="textpcard">
-    <ul class="nav justify-content-center mb-3">
-        <li class="nav-item col-md-6 ">
-          <div class="card bg-light" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title "><strong>Información de contacto</strong></h5>
-              <p class="card-text" id="userInfo"></p>
-              <a href="#" class="btn btn-primary" style="background-color:rgb(239, 207, 207); color:rgb(28, 49, 94); border-color:rgb(239, 207, 207) ;">Editar</a>
-            </div>
+
+<!----Barra de opciones de cuenta---->
+<main class="container-fluid text-center">
+  <header class="main-headers text-center">
+    <h1>Mi Cuenta</h1>
+    <h5>¡Bienvenido!</h5>
+  </header>
+  <div class="textpcard">
+  <ul class="nav justify-content-center mb-3">
+      <li class="nav-item col-md-6 ">
+        <div class="card bg-light" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title "><strong>Información de contacto</strong></h5>
+            <p class="card-text" id="userInfo"></p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1" style="background-color:rgb(239, 207, 207); color:rgb(28, 49, 94); border-color:rgb(239, 207, 207) ;">Editar</a>
           </div>
-        </li>
-        <li class="nav-item">
-          <div class="card bg-light" style="width: 18rem;">
-            <div class="card-body" id="userInfo">
-              <h5 class="card-title"><strong>Dirección de envío</strong></h5>
-              <p class="card-text" id="userAddress"></p>
-              <a href="#" class="btn btn-primary" style="background-color:rgb(239, 207, 207);  color:rgb(28, 49, 94); border-color:rgb(239, 207, 207) ;">Editar</a>
-            </div>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </li>
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header" style="background-color:rgb(239, 207, 207);  color:rgb(28, 49, 94); border-color:rgb(239, 207, 207) ;">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Actualiza tus datos de contacto</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
-     <!-------tabla-------->
+    <div class="modal-body" >
+      <input type="text" class="col-md-10 my-4" placeholder="Nombre:">
+      <input type="text" class="col-md-10" placeholder="Tu nuevo teléfono:">
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      <button type="button" class="btn btn-primary" style="background-color:rgb(239, 207, 207);  color:rgb(28, 49, 94); border-color:rgb(239, 207, 207) ;">Guardar</button>
+    </div>
+  </div>
+</div>
+</div>
+
+      <li class="nav-item">
+        <div class="card bg-light" style="width: 18rem;">
+          <div class="card-body" id="userInfo">
+            <h5 class="card-title"><strong>Dirección de envío</strong></h5>
+            <p class="card-text" id="userAddress"></p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal"  data-bs-target="#exampleModal" style="background-color:rgb(239, 207, 207);  color:rgb(28, 49, 94); border-color:rgb(239, 207, 207) ;">Editar</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+ <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header" style="background-color:rgb(239, 207, 207);  color:rgb(28, 49, 94); border-color:rgb(239, 207, 207) ;">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Actualiza tu dirección</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <input type="text" class="col-md-10" placeholder="Ingresa tu dirección:">
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Cerrar</button>
+      <button type="button" class="btn btn-primary" style="background-color:rgb(239, 207, 207);  color:rgb(28, 49, 94); border-color:rgb(239, 207, 207) ;">Guardar</button>
+    </div>
+  </div>
+</div>
+</div>
+  
+  <!-------tabla-------->
     <div>
     <table id="tablaListaCompras" class="table table-borderless table-striped" style="width: 60rem; align-items: center;">
       <thead>
