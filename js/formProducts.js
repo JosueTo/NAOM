@@ -1,5 +1,5 @@
-import { addTableRows, getAllProducts } from "./items.js";
-import { addProduct } from "./auth.js";
+import { addProduct, addTableRows, getAllProducts, deleteProduct, updateProduct } from "./items.js";
+
 
 let tableRow = document.getElementById("tableRow");
 let form = document.getElementById("form");
@@ -26,6 +26,8 @@ let exampleModal = document.getElementById("exampleModal");
 let btnConfirm = document.getElementById("btnConfirm");
 let btnCerrar = document.getElementById("btnCerrar");
 let CloseModal = document.getElementById("CloseModal");
+let token = localStorage.getItem("token");
+let productos = await getAllProducts().then(response => response.json());
 
 function encodeImageFileAsURL(element) {
   let file = element.files[0];
@@ -137,8 +139,6 @@ form.addEventListener("submit", (e) => {
 
 btnConfirm.addEventListener("click", (e) => {
   e.preventDefault();
-
-  console.log(valorCategoria.value)
   switch (valorCategoria.value) {
     case "1":
       categoria = {"id": 1, "tipoDeProducto": "Maquillaje"};
@@ -207,10 +207,32 @@ btnProductCancel.addEventListener("click", (e) => {
 
 
 window.addEventListener("load", () => {
-  getAllProducts().then(response => response.json()).then(products => products.forEach(product => tableRowAdd(product)));
+  productos.forEach(producto => tableRowAdd(producto));
+  let crud = document.getElementsByClassName("crud");
+  Array.from(crud).forEach(button => button.addEventListener("click", () => {
+    let method = button.id.split("-")[0];
+    let id = button.id.split("-")[1];
+    if(method == "delete"){
+      deleteProduct(id,token);
+      location.reload();
+    }else if(method == "update"){
+      //AQUI VA EL FILTRO POR ID PARA SACAR LOS DATOS DEL OBJETO Y EL editProduct
+    }
+  }));
 
 })
 
 function tableRowAdd(product) {
   tableRow.innerHTML += addTableRows(product);
 }
+
+function filterId(productos,id){
+  return productos.filter(producto => producto.id == id);
+}
+
+function editProduct(product){
+  //AQUI VAN LOS INPUTS DEL MODAL PARA LA EDICION
+}
+
+
+

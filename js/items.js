@@ -44,10 +44,15 @@ export function addItems(product) {
 export function addTableRows(product) {
   return `
     <tr>
+    <td>${product.id}</td>
     <td>${product.nombre}</td>
     <td>${product.precio}</td>
     <td>${product.descripcion}</td>
     <td>${product.stock}</td>
+    <td class="justify-content-around">
+      <button class="col-12 my-2 crud" id="update-${product.id}">Editar</button>
+      <button class="col-12 crud" id="delete-${product.id}">Borrar</button>
+    </td>
     </tr>
     `;
 }
@@ -68,6 +73,40 @@ export async function getProducts(id) {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
+    }
+  });
+  return response;
+}
+
+export async function addProduct(product,token){
+  const response = await fetch('http://localhost:8080/api/productos', {
+    method: 'POST',
+    body: JSON.stringify(product),
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer: ${token.replaceAll('"',"")}`
+    }
+  })
+  return response;
+}
+
+export async function deleteProduct(id,token) {
+  const response = await fetch(`http://localhost:8080/api/productos/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Bearer: ${token.replaceAll('"',"")}`
+    }
+  });
+  return response;
+}
+
+export async function updateProduct(id,product,token) {
+  const response = await fetch(`http://localhost:8080/api/productos/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify(product),
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer: ${token.replaceAll('"',"")}`
     }
   });
   return response;

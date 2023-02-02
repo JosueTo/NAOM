@@ -1,6 +1,7 @@
 import { addItem, getAllProducts } from "./items.js";
 
 const itemsContainer = document.getElementById("list-items");
+const productos = await getAllProducts().then(response => response.json());
 
 
 
@@ -11,9 +12,7 @@ function novedadesItems(product) {
 
 
 window.addEventListener("load", () => {
-    getAllProducts().then(response => response.json()).then(products => {
-        console.log(products);
-        products.forEach(product => novedadesItems(product))});
+    productos.forEach(product => novedadesItems(product));
 });
 
 

@@ -4,14 +4,14 @@ const cardWrapper = document.getElementById("card-wrapper");
 let maxVal = document.getElementById("maxVal");
 let minVal = document.getElementById("minVal");
 const filtrarBtn = document.getElementById("filtrarBtn");
+const productos = await getProducts(1).then(response => response.json());
 
 function maquillajeItems(product) {
   cardWrapper.innerHTML += addItems(product);
 }
 
 window.addEventListener("load", () => {
-  getProducts(1).then(response => response.json())
-  .then(products => products.forEach(product => maquillajeItems(product)))
+  productos.forEach(product => maquillajeItems(product))
 });
 
 

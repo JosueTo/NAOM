@@ -62,3 +62,8 @@ body .form-control {
 form div {
     margin-bottom: 2rem;
 }
+
+.crud:hover {
+    background-color: white;
+    border: 2px solid #EFCFCF;
+}
