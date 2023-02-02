@@ -30,3 +30,15 @@ export async function getUser(token){
     })
     return response;
 }
+
+export async function addProduct(product,token){
+  const response = await fetch('http://localhost:8080/api/productos', {
+    method: 'POST',
+    body: JSON.stringify(product),
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer: ${token.replaceAll('"',"")}`
+    }
+  })
+  return response;
+}

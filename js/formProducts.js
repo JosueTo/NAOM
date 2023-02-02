@@ -1,4 +1,5 @@
 import { addTableRows, getAllProducts } from "./items.js";
+import { addProduct } from "./auth.js";
 
 let tableRow = document.getElementById("tableRow");
 let form = document.getElementById("form");
@@ -46,13 +47,18 @@ form.addEventListener("submit", (e) => {
 
   let valido = true;
 
-  let product = {"name":`${name1.value}`,
-      "price":`${price.value}`,
-      "description":`${description.value}`,
-      "stock":`${stock.value}`,
-      "file":`${image}`}
+  let categoria = {"id": 1,
+  "tipoDeProducto": "Maquillaje"};
 
-  if (product.name.length < 3 || product.name.length > 20)
+  let product = {"nombre":`${name1.value}`,
+      "precio":`${price.value}`,
+      "descripcion":`${description.value}`,
+      "stock":`${stock.value}`,
+      "foto":``,
+      "rating": 10,
+      "categorias": categoria}
+
+  if (product.nombre.length < 3 || product.nombre.length > 20)
   {
     valido = false;
     alertName.style.display="block";
@@ -63,7 +69,7 @@ form.addEventListener("submit", (e) => {
   }
 
   
-  if (parseInt(product.price)<=0 || isNaN(parseInt(product.price)))
+  if (parseInt(product.precio)<=0 || isNaN(parseInt(product.precio)))
   {
     valido = false;
     alertPrice.style.display="block";
@@ -73,7 +79,7 @@ form.addEventListener("submit", (e) => {
     price.style.border = "solid green 1px";
   }
 
-  if (product.description.length < 15)
+  if (product.descripcion.length < 15)
   {
     valido = false;
     alertDescription.style.display="block";
@@ -108,11 +114,19 @@ form.addEventListener("submit", (e) => {
 btnConfirm.addEventListener("click", (e) => {
   e.preventDefault();
 
-  let product = {"name":`${name1.value}`,
-  "price":`${price.value}`,
-  "description":`${description.value}`,
-  "stock":`${stock.value}`,
-  "file":`${image}`}
+  let categoria = {"id": 1,
+  "tipoDeProducto": "Maquillaje"};
+
+  let product = {"nombre":`${name1.value}`,
+      "precio":`${price.value}`,
+      "descripcion":`${description.value}`,
+      "stock":`${stock.value}`,
+      "foto":``,
+      "rating": 10,
+      "categorias": categoria}
+
+  addProduct(product,localStorage.getItem("token")).then(response => response.json()).then(data =>console.log(data))
+
 
   
   exampleModal.style.display="none";
