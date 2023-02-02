@@ -13,6 +13,8 @@ let btnProductCancel = document.getElementById("btnProductCancel");
 let btnProduct = document.getElementById("btnProduct");
 let alertSuccess = document.getElementById("alertSuccess");
 let image;
+let valorCategoria = document.getElementById("selectorCategoria");
+let categoria;
 
 let alertName = document.getElementById("alertProductName");
 let alertPrice = document.getElementById("alertPrice");
@@ -47,8 +49,28 @@ form.addEventListener("submit", (e) => {
 
   let valido = true;
 
-  let categoria = {"id": 1,
-  "tipoDeProducto": "Maquillaje"};
+  console.log(valorCategoria.value)
+  switch (valorCategoria.value) {
+    case "1":
+      categoria = {"id": 1, "tipoDeProducto": "Maquillaje"};
+      console.log(categoria);
+      break;
+    case "2":
+      categoria = {"id": 2,  "tipoDeProducto": "Brochas"};
+      console.log(categoria);
+      break;
+    case "3":
+      categoria = {"id": 3,  "tipoDeProducto": "Cuidado Facial"};
+      console.log(categoria);
+      break;
+    case "4":
+      categoria = {"id": 4,  "tipoDeProducto": "Accesorios"};
+      console.log(categoria);
+      break;
+  
+    default:
+      break;
+  }
 
   let product = {"nombre":`${name1.value}`,
       "precio":`${price.value}`,
@@ -111,11 +133,33 @@ form.addEventListener("submit", (e) => {
   }
 });
 
+
+
 btnConfirm.addEventListener("click", (e) => {
   e.preventDefault();
 
-  let categoria = {"id": 1,
-  "tipoDeProducto": "Maquillaje"};
+  console.log(valorCategoria.value)
+  switch (valorCategoria.value) {
+    case "1":
+      categoria = {"id": 1, "tipoDeProducto": "Maquillaje"};
+      console.log(categoria);
+      break;
+    case "2":
+      categoria = {"id": 2,  "tipoDeProducto": "Brochas"};
+      console.log(categoria);
+      break;
+    case "3":
+      categoria = {"id": 3,  "tipoDeProducto": "Cuidado Facial"};
+      console.log(categoria);
+      break;
+    case "4":
+      categoria = {"id": 4,  "tipoDeProducto": "Accesorios"};
+      console.log(categoria);
+      break;
+  
+    default:
+      break;
+  }
 
   let product = {"nombre":`${name1.value}`,
       "precio":`${price.value}`,
