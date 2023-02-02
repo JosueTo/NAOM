@@ -4,19 +4,15 @@ let tableOrders = document.getElementById("tableOrders");
 let userInfo = document.getElementById("userInfo");
 let userAddress = document.getElementById("userAddress");
 const usuario = await getUser(localStorage.getItem("token")).then(response => response.json());
+usuario.ordenes.forEach(orden => {tableOrders.innerHTML += addUserOrders(orden, usuario.direccion)})
 
-window.addEventListener("load", () => {
-    usuario.ordenes.forEach(orden => {
-        tableOrders.innerHTML += addUserOrders(orden, usuario.direccion)
-    })
-    
-    userInfo.innerHTML = 
+userInfo.innerHTML = 
         `Nombre: ${usuario.nombre} ${usuario.apellido}<br><br>
         Correo: ${usuario.correo}<br><br>
-        Telefono: ${usuario.telefono}<br>`
+        Telefono: ${usuario.telefono}<br>`;
+        
+userAddress.innerHTML = `${usuario.direccion}`;
 
-    userAddress.innerHTML = `${usuario.direccion}`
-})
 
 function addUserOrders(orden, direccion) {
     return `

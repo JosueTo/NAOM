@@ -26,6 +26,7 @@ let btnCerrar = document.getElementById("btnCerrar");
 let CloseModal = document.getElementById("CloseModal");
 let token = localStorage.getItem("token");
 let productos = await getAllProducts().then(response => response.json());
+productos.forEach(producto => tableRowAdd(producto));
 let image;
 
 var myWidget = cloudinary.createUploadWidget({
@@ -209,7 +210,6 @@ btnProductCancel.addEventListener("click", (e) => {
 
 
 window.addEventListener("load", () => {
-  productos.forEach(producto => tableRowAdd(producto));
   let crud = document.getElementsByClassName("crud");
   Array.from(crud).forEach(button => button.addEventListener("click", () => {
     let method = button.id.split("-")[0];
