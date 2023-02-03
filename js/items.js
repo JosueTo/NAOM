@@ -59,30 +59,27 @@ export function addTableRows(product) {
     `;
 }
 
-export function addProductCart(product) {
+export function addProductCart(product,cantidad) {
   return `
-  <div class="article">
+  <div class="article" id="product#${product.id}">
           <img class="img-article" src="${product.foto}" alt="">
           <div class="purchase-info">
               <div class="article-info">
                 <p class="article-title">${product.nombre}</p>
-                <p class="article-name">${product.descripcion.slice(
-                  0,
-                  15
-                )}...</p>
+                <p class="article-name">${product.descripcion.slice(0,35)}...</p>
               </div>
               <div class="delete">
-                <span class="material-symbols-rounded">delete</span>
+                <span class="material-symbols-rounded" role="button" id="delete${product.id}">delete</span>
               </div>
               <div class="article-total">
-                <p>Cantidad: 1</p>
-                <p class="total-price">$495.00 MXN</p>
+                <p>Cantidad: ${cantidad}</p>
+                <p class="total-price">$${product.precio*cantidad}</p>
               </div>
               <div class="btnIncDec">
                 <div class="btn-commands">
-                  <span class="minus">-</span>
-                  <span class="num">01</span>
-                  <span class="plus">+</span>
+                  <span class="minus" id="minus-${product.id}">-</span>
+                  <span class="num" id="count-${cantidad}">${cantidad}</span>
+                  <span class="plus" id="plus-${product.id}">+</span>
                 </div>
               </div>
           </div>

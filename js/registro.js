@@ -99,13 +99,7 @@ btnRegistro.addEventListener("click", function (event) {
     clearTimeout(idTimeout);
   }
 
-  let registro = {
-    "nombre": `${nombre.value}`,
-    "apellido": `${apellido.value}`,
-    "correo": `${email.value}`,
-    "telefono": `${tel.value}`,
-    "contrasena": `${password.value}`
-  }
+ 
 
 
   if (validos == 6) {
