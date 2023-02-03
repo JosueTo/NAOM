@@ -15,7 +15,9 @@ export function addItem(product) {
 
         <div class="card-price">$${product.precio}</div>
     </div>
-    <a href="#" id="${product.id}" class="addCartProd mt-1 mb-2 position-relative bottom-0" type="submit"><strong>Agregar al carrito</a>
+    <a href="#" id="${
+      product.id
+    }" class="addCartProd mt-1 mb-2 position-relative bottom-0" type="submit"><strong>Agregar al carrito</a>
     </div>
     `;
 }
@@ -57,57 +59,91 @@ export function addTableRows(product) {
     `;
 }
 
+export function addProductCart(product) {
+  return `
+  <div class="article">
+          <img class="img-article" src="${product.foto}" alt="">
+          <div class="purchase-info">
+              <div class="article-info">
+                <p class="article-title">${product.nombre}</p>
+                <p class="article-name">${product.descripcion.slice(
+                  0,
+                  15
+                )}...</p>
+              </div>
+              <div class="delete">
+                <span class="material-symbols-rounded">delete</span>
+              </div>
+              <div class="article-total">
+                <p>Cantidad: 1</p>
+                <p class="total-price">$495.00 MXN</p>
+              </div>
+              <div class="btnIncDec">
+                <div class="btn-commands">
+                  <span class="minus">-</span>
+                  <span class="num">01</span>
+                  <span class="plus">+</span>
+                </div>
+              </div>
+          </div>
+        </div>
+  
+  `;
+}
 
 export async function getAllProducts() {
-  const response = await fetch('http://localhost:8080/api/productos/', {
-    method: 'GET',
+  const response = await fetch("http://localhost:8080/api/productos/", {
+    method: "GET",
     headers: {
-      'Content-Type': 'application/json'
-    }
+      "Content-Type": "application/json",
+    },
   });
   return response;
 }
 
 export async function getProducts(id) {
-  const response = await fetch(`http://localhost:8080/api/productos/all/${id}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json'
+  const response = await fetch(
+    `http://localhost:8080/api/productos/all/${id}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
     }
+  );
+  return response;
+}
+
+export async function addProduct(product, token) {
+  const response = await fetch("http://localhost:8080/api/productos", {
+    method: "POST",
+    body: JSON.stringify(product),
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer: ${token.replaceAll('"', "")}`,
+    },
   });
   return response;
 }
 
-export async function addProduct(product,token){
-  const response = await fetch('http://localhost:8080/api/productos', {
-    method: 'POST',
-    body: JSON.stringify(product),
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer: ${token.replaceAll('"',"")}`
-    }
-  })
-  return response;
-}
-
-export async function deleteProduct(id,token) {
+export async function deleteProduct(id, token) {
   const response = await fetch(`http://localhost:8080/api/productos/${id}`, {
-    method: 'DELETE',
+    method: "DELETE",
     headers: {
-      'Authorization': `Bearer: ${token.replaceAll('"',"")}`
-    }
+      Authorization: `Bearer: ${token.replaceAll('"', "")}`,
+    },
   });
   return response;
 }
 
-export async function updateProduct(id,product,token) {
+export async function updateProduct(id, product, token) {
   const response = await fetch(`http://localhost:8080/api/productos/${id}`, {
-    method: 'PUT',
+    method: "PUT",
     body: JSON.stringify(product),
     headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer: ${token.replaceAll('"',"")}`
-    }
+      "Content-Type": "application/json",
+      Authorization: `Bearer: ${token.replaceAll('"', "")}`,
+    },
   });
   return response;
 }
@@ -115,4 +151,4 @@ export async function updateProduct(id,product,token) {
 //Se va a implementar cuando el API este funcional.
 // export async function searchResult(keyword){
 //     return fetch("APIURL"+keyword);
-// 
+//
